@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.liyuan.ecommerce.mapper.MemberLevelMapper">
+
+	<resultMap id="MemberLevelPo" type="com.liyuan.ecommerce.domain.po.memberlevel.MemberLevelPo">
+		<result column="id" property="id" jdbcType="INTEGER"/>
+		<result column="level_value" property="levelValue" jdbcType="VARCHAR"/>
+		<result column="level_name" property="levelName" jdbcType="VARCHAR"/>
+		<result column="min_experience_value" property="minExperienceValue" jdbcType="INTEGER"/>
+		<result column="max_experience_value" property="maxExperienceValue" jdbcType="INTEGER"/>
+		<result column="add_time" property="addTime" jdbcType="TIMESTAMP"/>
+		<result column="add_user_code" property="addUserCode" jdbcType="VARCHAR"/>
+		<result column="opt_time" property="optTime" jdbcType="TIMESTAMP"/>
+		<result column="opt_user_code" property="optUserCode" jdbcType="VARCHAR"/>
+		<result column="state" property="state" jdbcType="INTEGER"/>
+		<result column="is_delete" property="isDelete" jdbcType="INTEGER"/>
+	</resultMap>
+
+	<sql id="fieldSql">
+		 t.id
+		,t.level_value
+		,t.level_name
+		,t.min_experience_value
+		,t.max_experience_value
+		,t.add_time
+		,t.add_user_code
+		,t.opt_time
+		,t.opt_user_code
+		,t.state
+		,t.is_delete
+	</sql>
+
+	<sql id="whereSql">
+		<if test="id != null">
+			AND t.id = #{id,jdbcType = INTEGER}
+		</if>
+		<if test="idList != null">
+			AND 
+			<foreach collection="idList" item="idItem" open="(" close=")" separator="OR">
+				t.id = #{idItem,jdbcType = INTEGER}
+			</foreach>
+		</if>
+		<if test="levelValue != null and levelValue != ''">
+			AND t.level_value = #{levelValue,jdbcType = VARCHAR}
+		</if>
+		<if test="levelName != null and levelName != ''">
+			AND t.level_name = #{levelName,jdbcType = VARCHAR}
+		</if>
+		<if test="minExperienceValue != null">
+			AND t.min_experience_value = #{minExperienceValue,jdbcType = INTEGER}
+		</if>
+		<if test="maxExperienceValue != null">
+			AND t.max_experience_value = #{maxExperienceValue,jdbcType = INTEGER}
+		</if>
+		<if test="minAddTime != null">
+			AND t.add_time &gt;= #{minAddTime,jdbcType = TIMESTAMP}
+		</if>
+		<if test="maxAddTime != null">
+			AND t.add_time &lt;= #{maxAddTime,jdbcType = TIMESTAMP}
+		</if>
+		<if test="addUserCode != null and addUserCode != ''">
+			AND t.add_user_code = #{addUserCode,jdbcType = VARCHAR}
+		</if>
+		<if test="optUserCode != null and optUserCode != ''">
+			AND t.opt_user_code = #{optUserCode,jdbcType = VARCHAR}
+		</if>
+		<if test="state != null">
+			AND t.state = #{state,jdbcType = INTEGER}
+		</if>
+		<if test="isDelete != null">
+			AND t.is_delete = #{isDelete,jdbcType = INTEGER}
+		</if>
+	</sql>
+
+	<sql id="whereDeleteSql">
+		<if test="id != null">
+			AND id = #{id,jdbcType = INTEGER}
+		</if>
+		<if test="idList != null">
+			AND 
+			<foreach collection="idList" item="idItem" open="(" close=")" separator="OR">
+				t.id = #{idItem,jdbcType = INTEGER}
+			</foreach>
+		</if>
+		<if test="levelValue != null and levelValue != ''">
+			AND level_value = #{levelValue,jdbcType = VARCHAR}
+		</if>
+		<if test="levelName != null and levelName != ''">
+			AND level_name = #{levelName,jdbcType = VARCHAR}
+		</if>
+		<if test="minExperienceValue != null">
+			AND min_experience_value = #{minExperienceValue,jdbcType = INTEGER}
+		</if>
+		<if test="maxExperienceValue != null">
+			AND max_experience_value = #{maxExperienceValue,jdbcType = INTEGER}
+		</if>
+		<if test="minAddTime != null">
+			AND add_time &gt;= #{minAddTime,jdbcType = TIMESTAMP}
+		</if>
+		<if test="maxAddTime != null">
+			AND add_time &lt;= #{maxAddTime,jdbcType = TIMESTAMP}
+		</if>
+		<if test="addUserCode != null and addUserCode != ''">
+			AND add_user_code = #{addUserCode,jdbcType = VARCHAR}
+		</if>
+		<if test="optUserCode != null and optUserCode != ''">
+			AND opt_user_code = #{optUserCode,jdbcType = VARCHAR}
+		</if>
+		<if test="state != null">
+			AND state = #{state,jdbcType = INTEGER}
+		</if>
+		<if test="isDelete != null">
+			AND is_delete = #{isDelete,jdbcType = INTEGER}
+		</if>
+	</sql>
+
+	<select id="select" parameterType="Integer" resultMap="MemberLevelPo">
+		SELECT 
+		<include refid="fieldSql"/>
+		  FROM tb_member_level t 
+		 WHERE t.id = #{id,jdbcType = INTEGER} 
+	</select>
+
+	<select id="count" parameterType="com.liyuan.ecommerce.domain.condition.memberlevel.MemberLevelCondition" resultType="Integer" >
+		SELECT 
+			count(1)
+		  FROM tb_member_level t 
+		<where>
+			<include refid="whereSql"/>
+		</where>
+	</select>
+
+	<select id="selectList" parameterType="com.liyuan.ecommerce.domain.condition.memberlevel.MemberLevelCondition" resultMap="MemberLevelPo">
+		SELECT 
+		<include refid="fieldSql"/>
+		  FROM tb_member_level t 
+		<where>
+			<include refid="whereSql"/>
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.liyuan.ecommerce.domain.po.memberlevel.MemberLevelPo">
+		<selectKey resultType="Integer" order="AFTER" keyProperty="id">
+				SELECT LAST_INSERT_ID()
+		</selectKey>
+
+		INSERT INTO tb_member_level(  
+			id
+		<if test="levelValue != null">
+			,level_value
+		</if>
+		<if test="levelName != null">
+			,level_name
+		</if>
+		<if test="minExperienceValue != null">
+			,min_experience_value
+		</if>
+		<if test="maxExperienceValue != null">
+			,max_experience_value
+		</if>
+		<if test="addTime != null">
+			,add_time
+		</if>
+		<if test="addUserCode != null">
+			,add_user_code
+		</if>
+		<if test="optTime != null">
+			,opt_time
+		</if>
+		<if test="optUserCode != null">
+			,opt_user_code
+		</if>
+		<if test="state != null">
+			,state
+		</if>
+		<if test="isDelete != null">
+			,is_delete
+		</if>
+		)
+		VALUES( 
+			#{id,jdbcType=INTEGER}
+		<if test="levelValue != null">
+			,#{levelValue,jdbcType=VARCHAR}
+		</if>
+		<if test="levelName != null">
+			,#{levelName,jdbcType=VARCHAR}
+		</if>
+		<if test="minExperienceValue != null">
+			,#{minExperienceValue,jdbcType=INTEGER}
+		</if>
+		<if test="maxExperienceValue != null">
+			,#{maxExperienceValue,jdbcType=INTEGER}
+		</if>
+		<if test="addTime != null">
+			,#{addTime,jdbcType=TIMESTAMP}
+		</if>
+		<if test="addUserCode != null">
+			,#{addUserCode,jdbcType=VARCHAR}
+		</if>
+		<if test="optTime != null">
+			,#{optTime,jdbcType=TIMESTAMP}
+		</if>
+		<if test="optUserCode != null">
+			,#{optUserCode,jdbcType=VARCHAR}
+		</if>
+		<if test="state != null">
+			,#{state,jdbcType=INTEGER}
+		</if>
+		<if test="isDelete != null">
+			,#{isDelete,jdbcType=INTEGER}
+		</if>
+		)
+	</insert>
+
+	<update id="update" parameterType="com.liyuan.ecommerce.domain.po.memberlevel.MemberLevelPo">
+		UPDATE tb_member_level t
+		 <set>
+		    <if test="levelValue != null">
+			    t.level_value = #{levelValue,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="levelName != null">
+			    t.level_name = #{levelName,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="minExperienceValue != null">
+			    t.min_experience_value = #{minExperienceValue,jdbcType = INTEGER}, 
+		    </if>
+		    <if test="maxExperienceValue != null">
+			    t.max_experience_value = #{maxExperienceValue,jdbcType = INTEGER}, 
+		    </if>
+		    <if test="addTime != null">
+			    t.add_time = #{addTime,jdbcType = TIMESTAMP}, 
+		    </if>
+		    <if test="addUserCode != null">
+			    t.add_user_code = #{addUserCode,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="optTime != null">
+			    t.opt_time = #{optTime,jdbcType = TIMESTAMP}, 
+		    </if>
+		    <if test="optUserCode != null">
+			    t.opt_user_code = #{optUserCode,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="state != null">
+			    t.state = #{state,jdbcType = INTEGER}, 
+		    </if>
+		    <if test="isDelete != null">
+			    t.is_delete = #{isDelete,jdbcType = INTEGER}, 
+		    </if>
+	    </set>
+		 WHERE t.id= #{id,jdbcType = INTEGER}
+	</update>
+
+	<delete id="delete" parameterType="Integer">
+		 DELETE FROM tb_member_level
+		  WHERE id = #{id,jdbcType=INTEGER} 
+	</delete>
+	<delete id="deleteByCondition" parameterType="com.liyuan.ecommerce.domain.condition.memberlevel.MemberLevelCondition">
+		 DELETE FROM tb_member_level
+		 <where>
+			<include refid="whereDeleteSql"/>
+		 </where>
+	</delete>
+</mapper>

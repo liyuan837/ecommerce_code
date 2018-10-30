@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.liyuan.ecommerce.mapper.ConsumerMapper">
+
+	<resultMap id="ConsumerPo" type="com.liyuan.ecommerce.domain.po.consumer.ConsumerPo">
+		<result column="id" property="id" jdbcType="VARCHAR"/>
+		<result column="consumer_code" property="consumerCode" jdbcType="VARCHAR"/>
+		<result column="nick_name" property="nickName" jdbcType="VARCHAR"/>
+		<result column="real_name" property="realName" jdbcType="VARCHAR"/>
+		<result column="phone" property="phone" jdbcType="VARCHAR"/>
+		<result column="password" property="password" jdbcType="VARCHAR"/>
+		<result column="sex" property="sex" jdbcType="INTEGER"/>
+		<result column="header_img" property="headerImg" jdbcType="VARCHAR"/>
+		<result column="qrcode_img" property="qrcodeImg" jdbcType="VARCHAR"/>
+		<result column="bonus_points" property="bonusPoints" jdbcType="INTEGER"/>
+		<result column="experience_value" property="experienceValue" jdbcType="INTEGER"/>
+		<result column="member_level_id" property="memberLevelId" jdbcType="INTEGER"/>
+		<result column="personal_profile" property="personalProfile" jdbcType="VARCHAR"/>
+		<result column="last_login_ip" property="lastLoginIp" jdbcType="VARCHAR"/>
+		<result column="last_login_time" property="lastLoginTime" jdbcType="TIMESTAMP"/>
+		<result column="add_time" property="addTime" jdbcType="TIMESTAMP"/>
+		<result column="add_user_code" property="addUserCode" jdbcType="VARCHAR"/>
+		<result column="opt_time" property="optTime" jdbcType="TIMESTAMP"/>
+		<result column="opt_user_code" property="optUserCode" jdbcType="VARCHAR"/>
+		<result column="state" property="state" jdbcType="INTEGER"/>
+		<result column="is_delete" property="isDelete" jdbcType="INTEGER"/>
+	</resultMap>
+
+	<sql id="fieldSql">
+		 t.id
+		,t.consumer_code
+		,t.nick_name
+		,t.real_name
+		,t.phone
+		,t.password
+		,t.sex
+		,t.header_img
+		,t.qrcode_img
+		,t.bonus_points
+		,t.experience_value
+		,t.member_level_id
+		,t.personal_profile
+		,t.last_login_ip
+		,t.last_login_time
+		,t.add_time
+		,t.add_user_code
+		,t.opt_time
+		,t.opt_user_code
+		,t.state
+		,t.is_delete
+	</sql>
+
+	<sql id="whereSql">
+		<if test="id != null and id != ''">
+			AND t.id = #{id,jdbcType = VARCHAR}
+		</if>
+		<if test="idList != null">
+			AND 
+			<foreach collection="idList" item="idItem" open="(" close=")" separator="OR">
+				t.id = #{idItem,jdbcType = VARCHAR}
+			</foreach>
+		</if>
+		<if test="consumerCode != null and consumerCode != ''">
+			AND t.consumer_code = #{consumerCode,jdbcType = VARCHAR}
+		</if>
+		<if test="nickName != null and nickName != ''">
+			AND t.nick_name = #{nickName,jdbcType = VARCHAR}
+		</if>
+		<if test="realName != null and realName != ''">
+			AND t.real_name = #{realName,jdbcType = VARCHAR}
+		</if>
+		<if test="phone != null and phone != ''">
+			AND t.phone = #{phone,jdbcType = VARCHAR}
+		</if>
+		<if test="password != null and password != ''">
+			AND t.password = #{password,jdbcType = VARCHAR}
+		</if>
+		<if test="sex != null">
+			AND t.sex = #{sex,jdbcType = INTEGER}
+		</if>
+		<if test="headerImg != null and headerImg != ''">
+			AND t.header_img = #{headerImg,jdbcType = VARCHAR}
+		</if>
+		<if test="qrcodeImg != null and qrcodeImg != ''">
+			AND t.qrcode_img = #{qrcodeImg,jdbcType = VARCHAR}
+		</if>
+		<if test="bonusPoints != null">
+			AND t.bonus_points = #{bonusPoints,jdbcType = INTEGER}
+		</if>
+		<if test="experienceValue != null">
+			AND t.experience_value = #{experienceValue,jdbcType = INTEGER}
+		</if>
+		<if test="memberLevelId != null">
+			AND t.member_level_id = #{memberLevelId,jdbcType = INTEGER}
+		</if>
+		<if test="personalProfile != null and personalProfile != ''">
+			AND t.personal_profile = #{personalProfile,jdbcType = VARCHAR}
+		</if>
+		<if test="lastLoginIp != null and lastLoginIp != ''">
+			AND t.last_login_ip = #{lastLoginIp,jdbcType = VARCHAR}
+		</if>
+		<if test="minAddTime != null">
+			AND t.add_time &gt;= #{minAddTime,jdbcType = TIMESTAMP}
+		</if>
+		<if test="maxAddTime != null">
+			AND t.add_time &lt;= #{maxAddTime,jdbcType = TIMESTAMP}
+		</if>
+		<if test="addUserCode != null and addUserCode != ''">
+			AND t.add_user_code = #{addUserCode,jdbcType = VARCHAR}
+		</if>
+		<if test="optUserCode != null and optUserCode != ''">
+			AND t.opt_user_code = #{optUserCode,jdbcType = VARCHAR}
+		</if>
+		<if test="state != null">
+			AND t.state = #{state,jdbcType = INTEGER}
+		</if>
+		<if test="isDelete != null">
+			AND t.is_delete = #{isDelete,jdbcType = INTEGER}
+		</if>
+	</sql>
+
+	<sql id="whereDeleteSql">
+		<if test="id != null and id != ''">
+			AND id = #{id,jdbcType = VARCHAR}
+		</if>
+		<if test="idList != null">
+			AND 
+			<foreach collection="idList" item="idItem" open="(" close=")" separator="OR">
+				t.id = #{idItem,jdbcType = VARCHAR}
+			</foreach>
+		</if>
+		<if test="consumerCode != null and consumerCode != ''">
+			AND consumer_code = #{consumerCode,jdbcType = VARCHAR}
+		</if>
+		<if test="nickName != null and nickName != ''">
+			AND nick_name = #{nickName,jdbcType = VARCHAR}
+		</if>
+		<if test="realName != null and realName != ''">
+			AND real_name = #{realName,jdbcType = VARCHAR}
+		</if>
+		<if test="phone != null and phone != ''">
+			AND phone = #{phone,jdbcType = VARCHAR}
+		</if>
+		<if test="password != null and password != ''">
+			AND password = #{password,jdbcType = VARCHAR}
+		</if>
+		<if test="sex != null">
+			AND sex = #{sex,jdbcType = INTEGER}
+		</if>
+		<if test="headerImg != null and headerImg != ''">
+			AND header_img = #{headerImg,jdbcType = VARCHAR}
+		</if>
+		<if test="qrcodeImg != null and qrcodeImg != ''">
+			AND qrcode_img = #{qrcodeImg,jdbcType = VARCHAR}
+		</if>
+		<if test="bonusPoints != null">
+			AND bonus_points = #{bonusPoints,jdbcType = INTEGER}
+		</if>
+		<if test="experienceValue != null">
+			AND experience_value = #{experienceValue,jdbcType = INTEGER}
+		</if>
+		<if test="memberLevelId != null">
+			AND member_level_id = #{memberLevelId,jdbcType = INTEGER}
+		</if>
+		<if test="personalProfile != null and personalProfile != ''">
+			AND personal_profile = #{personalProfile,jdbcType = VARCHAR}
+		</if>
+		<if test="lastLoginIp != null and lastLoginIp != ''">
+			AND last_login_ip = #{lastLoginIp,jdbcType = VARCHAR}
+		</if>
+		<if test="minAddTime != null">
+			AND add_time &gt;= #{minAddTime,jdbcType = TIMESTAMP}
+		</if>
+		<if test="maxAddTime != null">
+			AND add_time &lt;= #{maxAddTime,jdbcType = TIMESTAMP}
+		</if>
+		<if test="addUserCode != null and addUserCode != ''">
+			AND add_user_code = #{addUserCode,jdbcType = VARCHAR}
+		</if>
+		<if test="optUserCode != null and optUserCode != ''">
+			AND opt_user_code = #{optUserCode,jdbcType = VARCHAR}
+		</if>
+		<if test="state != null">
+			AND state = #{state,jdbcType = INTEGER}
+		</if>
+		<if test="isDelete != null">
+			AND is_delete = #{isDelete,jdbcType = INTEGER}
+		</if>
+	</sql>
+
+	<select id="select" parameterType="String" resultMap="ConsumerPo">
+		SELECT 
+		<include refid="fieldSql"/>
+		  FROM tb_consumer t 
+		 WHERE t.id = #{id,jdbcType = VARCHAR} 
+	</select>
+
+	<select id="count" parameterType="com.liyuan.ecommerce.domain.condition.consumer.ConsumerCondition" resultType="Integer" >
+		SELECT 
+			count(1)
+		  FROM tb_consumer t 
+		<where>
+			<include refid="whereSql"/>
+		</where>
+	</select>
+
+	<select id="selectList" parameterType="com.liyuan.ecommerce.domain.condition.consumer.ConsumerCondition" resultMap="ConsumerPo">
+		SELECT 
+		<include refid="fieldSql"/>
+		  FROM tb_consumer t 
+		<where>
+			<include refid="whereSql"/>
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.liyuan.ecommerce.domain.po.consumer.ConsumerPo">
+		INSERT INTO tb_consumer(  
+			id
+		<if test="consumerCode != null">
+			,consumer_code
+		</if>
+		<if test="nickName != null">
+			,nick_name
+		</if>
+		<if test="realName != null">
+			,real_name
+		</if>
+		<if test="phone != null">
+			,phone
+		</if>
+		<if test="password != null">
+			,password
+		</if>
+		<if test="sex != null">
+			,sex
+		</if>
+		<if test="headerImg != null">
+			,header_img
+		</if>
+		<if test="qrcodeImg != null">
+			,qrcode_img
+		</if>
+		<if test="bonusPoints != null">
+			,bonus_points
+		</if>
+		<if test="experienceValue != null">
+			,experience_value
+		</if>
+		<if test="memberLevelId != null">
+			,member_level_id
+		</if>
+		<if test="personalProfile != null">
+			,personal_profile
+		</if>
+		<if test="lastLoginIp != null">
+			,last_login_ip
+		</if>
+		<if test="lastLoginTime != null">
+			,last_login_time
+		</if>
+		<if test="addTime != null">
+			,add_time
+		</if>
+		<if test="addUserCode != null">
+			,add_user_code
+		</if>
+		<if test="optTime != null">
+			,opt_time
+		</if>
+		<if test="optUserCode != null">
+			,opt_user_code
+		</if>
+		<if test="state != null">
+			,state
+		</if>
+		<if test="isDelete != null">
+			,is_delete
+		</if>
+		)
+		VALUES( 
+			#{id,jdbcType=VARCHAR}
+		<if test="consumerCode != null">
+			,#{consumerCode,jdbcType=VARCHAR}
+		</if>
+		<if test="nickName != null">
+			,#{nickName,jdbcType=VARCHAR}
+		</if>
+		<if test="realName != null">
+			,#{realName,jdbcType=VARCHAR}
+		</if>
+		<if test="phone != null">
+			,#{phone,jdbcType=VARCHAR}
+		</if>
+		<if test="password != null">
+			,#{password,jdbcType=VARCHAR}
+		</if>
+		<if test="sex != null">
+			,#{sex,jdbcType=INTEGER}
+		</if>
+		<if test="headerImg != null">
+			,#{headerImg,jdbcType=VARCHAR}
+		</if>
+		<if test="qrcodeImg != null">
+			,#{qrcodeImg,jdbcType=VARCHAR}
+		</if>
+		<if test="bonusPoints != null">
+			,#{bonusPoints,jdbcType=INTEGER}
+		</if>
+		<if test="experienceValue != null">
+			,#{experienceValue,jdbcType=INTEGER}
+		</if>
+		<if test="memberLevelId != null">
+			,#{memberLevelId,jdbcType=INTEGER}
+		</if>
+		<if test="personalProfile != null">
+			,#{personalProfile,jdbcType=VARCHAR}
+		</if>
+		<if test="lastLoginIp != null">
+			,#{lastLoginIp,jdbcType=VARCHAR}
+		</if>
+		<if test="lastLoginTime != null">
+			,#{lastLoginTime,jdbcType=TIMESTAMP}
+		</if>
+		<if test="addTime != null">
+			,#{addTime,jdbcType=TIMESTAMP}
+		</if>
+		<if test="addUserCode != null">
+			,#{addUserCode,jdbcType=VARCHAR}
+		</if>
+		<if test="optTime != null">
+			,#{optTime,jdbcType=TIMESTAMP}
+		</if>
+		<if test="optUserCode != null">
+			,#{optUserCode,jdbcType=VARCHAR}
+		</if>
+		<if test="state != null">
+			,#{state,jdbcType=INTEGER}
+		</if>
+		<if test="isDelete != null">
+			,#{isDelete,jdbcType=INTEGER}
+		</if>
+		)
+	</insert>
+
+	<update id="update" parameterType="com.liyuan.ecommerce.domain.po.consumer.ConsumerPo">
+		UPDATE tb_consumer t
+		 <set>
+		    <if test="consumerCode != null">
+			    t.consumer_code = #{consumerCode,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="nickName != null">
+			    t.nick_name = #{nickName,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="realName != null">
+			    t.real_name = #{realName,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="phone != null">
+			    t.phone = #{phone,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="password != null">
+			    t.password = #{password,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="sex != null">
+			    t.sex = #{sex,jdbcType = INTEGER}, 
+		    </if>
+		    <if test="headerImg != null">
+			    t.header_img = #{headerImg,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="qrcodeImg != null">
+			    t.qrcode_img = #{qrcodeImg,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="bonusPoints != null">
+			    t.bonus_points = #{bonusPoints,jdbcType = INTEGER}, 
+		    </if>
+		    <if test="experienceValue != null">
+			    t.experience_value = #{experienceValue,jdbcType = INTEGER}, 
+		    </if>
+		    <if test="memberLevelId != null">
+			    t.member_level_id = #{memberLevelId,jdbcType = INTEGER}, 
+		    </if>
+		    <if test="personalProfile != null">
+			    t.personal_profile = #{personalProfile,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="lastLoginIp != null">
+			    t.last_login_ip = #{lastLoginIp,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="lastLoginTime != null">
+			    t.last_login_time = #{lastLoginTime,jdbcType = TIMESTAMP}, 
+		    </if>
+		    <if test="addTime != null">
+			    t.add_time = #{addTime,jdbcType = TIMESTAMP}, 
+		    </if>
+		    <if test="addUserCode != null">
+			    t.add_user_code = #{addUserCode,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="optTime != null">
+			    t.opt_time = #{optTime,jdbcType = TIMESTAMP}, 
+		    </if>
+		    <if test="optUserCode != null">
+			    t.opt_user_code = #{optUserCode,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="state != null">
+			    t.state = #{state,jdbcType = INTEGER}, 
+		    </if>
+		    <if test="isDelete != null">
+			    t.is_delete = #{isDelete,jdbcType = INTEGER}, 
+		    </if>
+	    </set>
+		 WHERE t.id= #{id,jdbcType = VARCHAR}
+	</update>
+
+	<delete id="delete" parameterType="String">
+		 DELETE FROM tb_consumer
+		  WHERE id = #{id,jdbcType=VARCHAR} 
+	</delete>
+	<delete id="deleteByCondition" parameterType="com.liyuan.ecommerce.domain.condition.consumer.ConsumerCondition">
+		 DELETE FROM tb_consumer
+		 <where>
+			<include refid="whereDeleteSql"/>
+		 </where>
+	</delete>
+</mapper>

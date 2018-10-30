@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.liyuan.ecommerce.mapper.ConsumerExtendMapper">
+
+	<resultMap id="ConsumerExtendPo" type="com.liyuan.ecommerce.domain.po.consumerextend.ConsumerExtendPo">
+		<result column="consumer_id" property="consumerId" jdbcType="INTEGER"/>
+		<result column="birthday" property="birthday" jdbcType="TIMESTAMP"/>
+		<result column="age" property="age" jdbcType="INTEGER"/>
+		<result column="idcard" property="idcard" jdbcType="VARCHAR"/>
+		<result column="idcard_img_fore" property="idcardImgFore" jdbcType="VARCHAR"/>
+		<result column="idcard_img_back" property="idcardImgBack" jdbcType="VARCHAR"/>
+		<result column="email" property="email" jdbcType="VARCHAR"/>
+		<result column="address_province" property="addressProvince" jdbcType="VARCHAR"/>
+		<result column="address_city" property="addressCity" jdbcType="VARCHAR"/>
+		<result column="address_distinct" property="addressDistinct" jdbcType="VARCHAR"/>
+		<result column="address_detail" property="addressDetail" jdbcType="VARCHAR"/>
+		<result column="recommender_id" property="recommenderId" jdbcType="VARCHAR"/>
+		<result column="company_id" property="companyId" jdbcType="VARCHAR"/>
+	</resultMap>
+
+	<sql id="fieldSql">
+		 t.consumer_id
+		,t.birthday
+		,t.age
+		,t.idcard
+		,t.idcard_img_fore
+		,t.idcard_img_back
+		,t.email
+		,t.address_province
+		,t.address_city
+		,t.address_distinct
+		,t.address_detail
+		,t.recommender_id
+		,t.company_id
+	</sql>
+
+	<sql id="whereSql">
+		<if test="consumerId != null">
+			AND t.consumer_id = #{consumerId,jdbcType = INTEGER}
+		</if>
+		<if test="consumerIdList != null">
+			AND 
+			<foreach collection="consumerIdList" item="consumerIdItem" open="(" close=")" separator="OR">
+				t.consumer_id = #{consumerIdItem,jdbcType = INTEGER}
+			</foreach>
+		</if>
+		<if test="age != null">
+			AND t.age = #{age,jdbcType = INTEGER}
+		</if>
+		<if test="idcard != null and idcard != ''">
+			AND t.idcard = #{idcard,jdbcType = VARCHAR}
+		</if>
+		<if test="idcardImgFore != null and idcardImgFore != ''">
+			AND t.idcard_img_fore = #{idcardImgFore,jdbcType = VARCHAR}
+		</if>
+		<if test="idcardImgBack != null and idcardImgBack != ''">
+			AND t.idcard_img_back = #{idcardImgBack,jdbcType = VARCHAR}
+		</if>
+		<if test="email != null and email != ''">
+			AND t.email = #{email,jdbcType = VARCHAR}
+		</if>
+		<if test="addressProvince != null and addressProvince != ''">
+			AND t.address_province = #{addressProvince,jdbcType = VARCHAR}
+		</if>
+		<if test="addressCity != null and addressCity != ''">
+			AND t.address_city = #{addressCity,jdbcType = VARCHAR}
+		</if>
+		<if test="addressDistinct != null and addressDistinct != ''">
+			AND t.address_distinct = #{addressDistinct,jdbcType = VARCHAR}
+		</if>
+		<if test="addressDetail != null and addressDetail != ''">
+			AND t.address_detail = #{addressDetail,jdbcType = VARCHAR}
+		</if>
+		<if test="recommenderId != null and recommenderId != ''">
+			AND t.recommender_id = #{recommenderId,jdbcType = VARCHAR}
+		</if>
+		<if test="companyId != null and companyId != ''">
+			AND t.company_id = #{companyId,jdbcType = VARCHAR}
+		</if>
+	</sql>
+
+	<sql id="whereDeleteSql">
+		<if test="consumerId != null">
+			AND consumer_id = #{consumerId,jdbcType = INTEGER}
+		</if>
+		<if test="consumerIdList != null">
+			AND 
+			<foreach collection="consumerIdList" item="consumerIdItem" open="(" close=")" separator="OR">
+				t.consumer_id = #{consumerIdItem,jdbcType = INTEGER}
+			</foreach>
+		</if>
+		<if test="age != null">
+			AND age = #{age,jdbcType = INTEGER}
+		</if>
+		<if test="idcard != null and idcard != ''">
+			AND idcard = #{idcard,jdbcType = VARCHAR}
+		</if>
+		<if test="idcardImgFore != null and idcardImgFore != ''">
+			AND idcard_img_fore = #{idcardImgFore,jdbcType = VARCHAR}
+		</if>
+		<if test="idcardImgBack != null and idcardImgBack != ''">
+			AND idcard_img_back = #{idcardImgBack,jdbcType = VARCHAR}
+		</if>
+		<if test="email != null and email != ''">
+			AND email = #{email,jdbcType = VARCHAR}
+		</if>
+		<if test="addressProvince != null and addressProvince != ''">
+			AND address_province = #{addressProvince,jdbcType = VARCHAR}
+		</if>
+		<if test="addressCity != null and addressCity != ''">
+			AND address_city = #{addressCity,jdbcType = VARCHAR}
+		</if>
+		<if test="addressDistinct != null and addressDistinct != ''">
+			AND address_distinct = #{addressDistinct,jdbcType = VARCHAR}
+		</if>
+		<if test="addressDetail != null and addressDetail != ''">
+			AND address_detail = #{addressDetail,jdbcType = VARCHAR}
+		</if>
+		<if test="recommenderId != null and recommenderId != ''">
+			AND recommender_id = #{recommenderId,jdbcType = VARCHAR}
+		</if>
+		<if test="companyId != null and companyId != ''">
+			AND company_id = #{companyId,jdbcType = VARCHAR}
+		</if>
+	</sql>
+
+	<select id="select" parameterType="Integer" resultMap="ConsumerExtendPo">
+		SELECT 
+		<include refid="fieldSql"/>
+		  FROM tb_consumer_extend t 
+		 WHERE t.consumer_id = #{consumerId,jdbcType = INTEGER} 
+	</select>
+
+	<select id="count" parameterType="com.liyuan.ecommerce.domain.condition.consumerextend.ConsumerExtendCondition" resultType="Integer" >
+		SELECT 
+			count(1)
+		  FROM tb_consumer_extend t 
+		<where>
+			<include refid="whereSql"/>
+		</where>
+	</select>
+
+	<select id="selectList" parameterType="com.liyuan.ecommerce.domain.condition.consumerextend.ConsumerExtendCondition" resultMap="ConsumerExtendPo">
+		SELECT 
+		<include refid="fieldSql"/>
+		  FROM tb_consumer_extend t 
+		<where>
+			<include refid="whereSql"/>
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.liyuan.ecommerce.domain.po.consumerextend.ConsumerExtendPo">
+		INSERT INTO tb_consumer_extend(  
+			consumer_id
+		<if test="birthday != null">
+			,birthday
+		</if>
+		<if test="age != null">
+			,age
+		</if>
+		<if test="idcard != null">
+			,idcard
+		</if>
+		<if test="idcardImgFore != null">
+			,idcard_img_fore
+		</if>
+		<if test="idcardImgBack != null">
+			,idcard_img_back
+		</if>
+		<if test="email != null">
+			,email
+		</if>
+		<if test="addressProvince != null">
+			,address_province
+		</if>
+		<if test="addressCity != null">
+			,address_city
+		</if>
+		<if test="addressDistinct != null">
+			,address_distinct
+		</if>
+		<if test="addressDetail != null">
+			,address_detail
+		</if>
+		<if test="recommenderId != null">
+			,recommender_id
+		</if>
+		<if test="companyId != null">
+			,company_id
+		</if>
+		)
+		VALUES( 
+			#{consumerId,jdbcType=INTEGER}
+		<if test="birthday != null">
+			,#{birthday,jdbcType=TIMESTAMP}
+		</if>
+		<if test="age != null">
+			,#{age,jdbcType=INTEGER}
+		</if>
+		<if test="idcard != null">
+			,#{idcard,jdbcType=VARCHAR}
+		</if>
+		<if test="idcardImgFore != null">
+			,#{idcardImgFore,jdbcType=VARCHAR}
+		</if>
+		<if test="idcardImgBack != null">
+			,#{idcardImgBack,jdbcType=VARCHAR}
+		</if>
+		<if test="email != null">
+			,#{email,jdbcType=VARCHAR}
+		</if>
+		<if test="addressProvince != null">
+			,#{addressProvince,jdbcType=VARCHAR}
+		</if>
+		<if test="addressCity != null">
+			,#{addressCity,jdbcType=VARCHAR}
+		</if>
+		<if test="addressDistinct != null">
+			,#{addressDistinct,jdbcType=VARCHAR}
+		</if>
+		<if test="addressDetail != null">
+			,#{addressDetail,jdbcType=VARCHAR}
+		</if>
+		<if test="recommenderId != null">
+			,#{recommenderId,jdbcType=VARCHAR}
+		</if>
+		<if test="companyId != null">
+			,#{companyId,jdbcType=VARCHAR}
+		</if>
+		)
+	</insert>
+
+	<update id="update" parameterType="com.liyuan.ecommerce.domain.po.consumerextend.ConsumerExtendPo">
+		UPDATE tb_consumer_extend t
+		 <set>
+		    <if test="birthday != null">
+			    t.birthday = #{birthday,jdbcType = TIMESTAMP}, 
+		    </if>
+		    <if test="age != null">
+			    t.age = #{age,jdbcType = INTEGER}, 
+		    </if>
+		    <if test="idcard != null">
+			    t.idcard = #{idcard,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="idcardImgFore != null">
+			    t.idcard_img_fore = #{idcardImgFore,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="idcardImgBack != null">
+			    t.idcard_img_back = #{idcardImgBack,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="email != null">
+			    t.email = #{email,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="addressProvince != null">
+			    t.address_province = #{addressProvince,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="addressCity != null">
+			    t.address_city = #{addressCity,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="addressDistinct != null">
+			    t.address_distinct = #{addressDistinct,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="addressDetail != null">
+			    t.address_detail = #{addressDetail,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="recommenderId != null">
+			    t.recommender_id = #{recommenderId,jdbcType = VARCHAR}, 
+		    </if>
+		    <if test="companyId != null">
+			    t.company_id = #{companyId,jdbcType = VARCHAR}, 
+		    </if>
+	    </set>
+		 WHERE t.consumer_id= #{consumerId,jdbcType = INTEGER}
+	</update>
+
+	<delete id="delete" parameterType="Integer">
+		 DELETE FROM tb_consumer_extend
+		  WHERE consumer_id = #{consumerId,jdbcType=INTEGER} 
+	</delete>
+	<delete id="deleteByCondition" parameterType="com.liyuan.ecommerce.domain.condition.consumerextend.ConsumerExtendCondition">
+		 DELETE FROM tb_consumer_extend
+		 <where>
+			<include refid="whereDeleteSql"/>
+		 </where>
+	</delete>
+</mapper>
