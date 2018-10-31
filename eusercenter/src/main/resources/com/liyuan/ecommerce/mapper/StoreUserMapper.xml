@@ -16,9 +16,9 @@
 		<result column="user_role_id" property="userRoleId" jdbcType="INTEGER"/>
 		<result column="store_id" property="storeId" jdbcType="VARCHAR"/>
 		<result column="add_time" property="addTime" jdbcType="TIMESTAMP"/>
-		<result column="add_user_code" property="addUserCode" jdbcType="VARCHAR"/>
+		<result column="add_user_id" property="addUserId" jdbcType="VARCHAR"/>
 		<result column="opt_time" property="optTime" jdbcType="TIMESTAMP"/>
-		<result column="opt_user_code" property="optUserCode" jdbcType="VARCHAR"/>
+		<result column="opt_user_id" property="optUserId" jdbcType="VARCHAR"/>
 		<result column="state" property="state" jdbcType="INTEGER"/>
 		<result column="is_delete" property="isDelete" jdbcType="INTEGER"/>
 	</resultMap>
@@ -37,9 +37,9 @@
 		,t.user_role_id
 		,t.store_id
 		,t.add_time
-		,t.add_user_code
+		,t.add_user_id
 		,t.opt_time
-		,t.opt_user_code
+		,t.opt_user_id
 		,t.state
 		,t.is_delete
 	</sql>
@@ -90,11 +90,11 @@
 		<if test="maxAddTime != null">
 			AND t.add_time &lt;= #{maxAddTime,jdbcType = TIMESTAMP}
 		</if>
-		<if test="addUserCode != null and addUserCode != ''">
-			AND t.add_user_code = #{addUserCode,jdbcType = VARCHAR}
+		<if test="addUserId != null and addUserId != ''">
+			AND t.add_user_id = #{addUserId,jdbcType = VARCHAR}
 		</if>
-		<if test="optUserCode != null and optUserCode != ''">
-			AND t.opt_user_code = #{optUserCode,jdbcType = VARCHAR}
+		<if test="optUserId != null and optUserId != ''">
+			AND t.opt_user_id = #{optUserId,jdbcType = VARCHAR}
 		</if>
 		<if test="state != null">
 			AND t.state = #{state,jdbcType = INTEGER}
@@ -150,11 +150,11 @@
 		<if test="maxAddTime != null">
 			AND add_time &lt;= #{maxAddTime,jdbcType = TIMESTAMP}
 		</if>
-		<if test="addUserCode != null and addUserCode != ''">
-			AND add_user_code = #{addUserCode,jdbcType = VARCHAR}
+		<if test="addUserId != null and addUserId != ''">
+			AND add_user_id = #{addUserId,jdbcType = VARCHAR}
 		</if>
-		<if test="optUserCode != null and optUserCode != ''">
-			AND opt_user_code = #{optUserCode,jdbcType = VARCHAR}
+		<if test="optUserId != null and optUserId != ''">
+			AND opt_user_id = #{optUserId,jdbcType = VARCHAR}
 		</if>
 		<if test="state != null">
 			AND state = #{state,jdbcType = INTEGER}
@@ -228,14 +228,14 @@
 		<if test="addTime != null">
 			,add_time
 		</if>
-		<if test="addUserCode != null">
-			,add_user_code
+		<if test="addUserId != null">
+			,add_user_id
 		</if>
 		<if test="optTime != null">
 			,opt_time
 		</if>
-		<if test="optUserCode != null">
-			,opt_user_code
+		<if test="optUserId != null">
+			,opt_user_id
 		</if>
 		<if test="state != null">
 			,state
@@ -282,14 +282,14 @@
 		<if test="addTime != null">
 			,#{addTime,jdbcType=TIMESTAMP}
 		</if>
-		<if test="addUserCode != null">
-			,#{addUserCode,jdbcType=VARCHAR}
+		<if test="addUserId != null">
+			,#{addUserId,jdbcType=VARCHAR}
 		</if>
 		<if test="optTime != null">
 			,#{optTime,jdbcType=TIMESTAMP}
 		</if>
-		<if test="optUserCode != null">
-			,#{optUserCode,jdbcType=VARCHAR}
+		<if test="optUserId != null">
+			,#{optUserId,jdbcType=VARCHAR}
 		</if>
 		<if test="state != null">
 			,#{state,jdbcType=INTEGER}
@@ -339,14 +339,14 @@
 		    <if test="addTime != null">
 			    t.add_time = #{addTime,jdbcType = TIMESTAMP}, 
 		    </if>
-		    <if test="addUserCode != null">
-			    t.add_user_code = #{addUserCode,jdbcType = VARCHAR}, 
+		    <if test="addUserId != null">
+			    t.add_user_id = #{addUserId,jdbcType = VARCHAR}, 
 		    </if>
 		    <if test="optTime != null">
 			    t.opt_time = #{optTime,jdbcType = TIMESTAMP}, 
 		    </if>
-		    <if test="optUserCode != null">
-			    t.opt_user_code = #{optUserCode,jdbcType = VARCHAR}, 
+		    <if test="optUserId != null">
+			    t.opt_user_id = #{optUserId,jdbcType = VARCHAR}, 
 		    </if>
 		    <if test="state != null">
 			    t.state = #{state,jdbcType = INTEGER}, 

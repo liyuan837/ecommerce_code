@@ -99,6 +99,21 @@ public class RedisService {
         return result;
     }
     /**
+     * 读取缓存
+     * @param key
+     * @return
+     */
+    public <T> T get(final String key,Class<T> type) {
+        Object result = null;
+        ValueOperations<Serializable, Object> operations = redisTemplate.opsForValue();
+        result = operations.get(key);
+        if(result == null){
+            return null;
+        }else{
+            return (T)result;
+        }
+    }
+    /**
      * 哈希 添加
      * @param key
      * @param hashKey

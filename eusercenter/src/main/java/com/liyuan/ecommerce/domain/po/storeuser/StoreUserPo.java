@@ -62,7 +62,7 @@ public class StoreUserPo implements Serializable {
 	/**
 	 * 添加人
 	*/
-	private String addUserCode;
+	private String addUserId;
 	/**
 	 * 修改操作时间
 	*/
@@ -70,7 +70,7 @@ public class StoreUserPo implements Serializable {
 	/**
 	 * 修改操作人
 	*/
-	private String optUserCode;
+	private String optUserId;
 	/**
 	 * 状态，1正常，0注销
 	*/

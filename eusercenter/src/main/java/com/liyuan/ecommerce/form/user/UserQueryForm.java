@@ -12,10 +12,10 @@ import lombok.Data;
 public class UserQueryForm extends BaseQueryForm implements Serializable {
 
 	@ApiModelProperty(value = "用户编号")
-	private String userCode;
+	private String userId;
 
 	@ApiModelProperty(value = "用户编号列表")
-	private List<String> userCodeList;
+	private List<String> userIdList;
 
 	@ApiModelProperty(value = "昵称，可用作登录验证")
 	private String nickName;

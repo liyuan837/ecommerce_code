@@ -10,7 +10,7 @@ public class UserPo implements Serializable {
 	/**
 	 * 用户编号
 	*/
-	private String userCode;
+	private String userId;
 	/**
 	 * 昵称，可用作登录验证
 	*/

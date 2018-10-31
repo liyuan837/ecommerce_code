@@ -24,9 +24,6 @@ public class StoreCreateForm implements Serializable {
 	@ApiModelProperty(value = "门店类型，1商家，2自营")
 	private Integer type;
 
-	@ApiModelProperty(value = "所属商家id")
-	private Integer companyIc;
-
 	@ApiModelProperty(value = "联系人身份证")
 	private String idcard;
 
@@ -76,10 +73,10 @@ public class StoreCreateForm implements Serializable {
 	private String companyId;
 
 	@ApiModelProperty(value = "添加人")
-	private String addUserCode;
+	private String addUserId;
 
 	@ApiModelProperty(value = "修改操作人")
-	private String optUserCode;
+	private String optUserId;
 
 	@ApiModelProperty(value = "业务状态，0待审核，1正常，审核通过，-1审核不通过")
 	private Integer state;

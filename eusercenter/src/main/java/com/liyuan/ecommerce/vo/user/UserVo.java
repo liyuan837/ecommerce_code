@@ -13,7 +13,7 @@ import lombok.Data;
 public class UserVo implements Serializable {
 
 	@ApiModelProperty(value = "用户编号", required = true)
-	private String userCode;
+	private String userId;
 
 	@ApiModelProperty(value = "昵称，可用作登录验证")
 	private String nickName;

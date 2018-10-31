@@ -34,7 +34,7 @@ public class MemberLevelPo implements Serializable {
 	/**
 	 * 添加人
 	*/
-	private String addUserCode;
+	private String addUserId;
 	/**
 	 * 修改操作时间
 	*/
@@ -42,7 +42,7 @@ public class MemberLevelPo implements Serializable {
 	/**
 	 * 修改操作人
 	*/
-	private String optUserCode;
+	private String optUserId;
 	/**
 	 * 状态，1启用，0禁用
 	*/

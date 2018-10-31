@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Data
 @ApiModel(description = "平台用户登录表")
-public class UserLoginForm extends BaseQueryForm implements Serializable {
+public class UserLoginForm implements Serializable {
 
 	@ApiModelProperty(value = "昵称，可用作登录验证")
 	private String nickName;
@@ -31,4 +31,6 @@ public class UserLoginForm extends BaseQueryForm implements Serializable {
     @NotNull(message = "用户类型不能为空")
 	private Integer userType;
 
+	@ApiModelProperty(value = "校验码")
+	private String verifyCode;
 }

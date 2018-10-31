@@ -1,17 +1,21 @@
 package com.liyuan.ecommerce.util;
 
+import com.github.pagehelper.util.StringUtil;
+import com.liyuan.ecommerce.constants.Times;
 import com.liyuan.ecommerce.domain.exception.eusercenterException;
 import com.liyuan.ecommerce.service.RedisService;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.imageio.ImageIO;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;
+import java.util.UUID;
 
 /**
  * @Author:LiYuan
@@ -27,13 +31,24 @@ public class CaptureUtil {
     public static Integer CHARTYPE = 1;
     public static Integer NUMANDCHARTYPE = 2;
 
-    private static String[] randStrings= new String[]{"0123456789","ABCDEFGHIJKLMNOPQRSTUVWXYZ","0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+    private static String[] randStrings = new String[]{"0123456789", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 
-
-    private static int width = 95;// 图片宽
-    private static int height = 25;// 图片高
-    private static int lineSize = 40;// 干扰线数量
-    private static int stringNum = 4;// 随机产生字符数量
+    /**
+     * 图片宽
+     */
+    private static int width = 95;
+    /**
+     * 图片高
+     */
+    private static int height = 25;
+    /**
+     * 干扰线数量
+     */
+    private static int lineSize = 40;
+    /**
+     * 随机产生字符数量
+     */
+    private static int stringNum = 4;
 
     private static final Logger logger = LoggerFactory.getLogger(CaptureUtil.class);
 
@@ -50,10 +65,10 @@ public class CaptureUtil {
      * 获得颜色
      */
     private static Color getRandColor(int fc, int bc) {
-        if (fc > 255){
+        if (fc > 255) {
             fc = 255;
         }
-        if (bc > 255){
+        if (bc > 255) {
             bc = 255;
         }
         int r = fc + random.nextInt(bc - fc - 16);
@@ -66,7 +81,7 @@ public class CaptureUtil {
      * 生成随机图片
      */
     public static void drawImage(int captureType, int expSeconds, RedisService redisService, HttpServletRequest request, HttpServletResponse response) {
-        if(captureType > randStrings.length-1){
+        if (captureType > randStrings.length - 1) {
             throw new eusercenterException("校验码类型错误");
         }
         // BufferedImage类是具有缓冲区的Image类,Image类是用于描述图像信息的类
@@ -84,11 +99,13 @@ public class CaptureUtil {
             drowLine(g);
         }
         // 绘制随机字符
-        String randomString = "";
+        String captureValue = "";
         for (int i = 1; i <= stringNum; i++) {
-            randomString = drowString(g, randomString,captureType, i);
+            captureValue = drowString(g, captureValue, captureType, i);
         }
-        //将生成的随机字符串保存到redis中 TODO
+        //将生成的校验码以及校验码key保存在redis和cookie中
+        String captureKey = setCookie(response, request.getCookies(), Times.ONE_MONTH);
+        redisService.set(captureKey, captureValue, Times.ONE_MINUTE * 5L);
 
         g.dispose();
         try {
@@ -103,11 +120,11 @@ public class CaptureUtil {
     /**
      * 绘制字符串
      */
-    private static String drowString(Graphics g, String randomString,int captureType, int i) {
+    private static String drowString(Graphics g, String randomString, int captureType, int i) {
         g.setFont(getFont());
         g.setColor(new Color(random.nextInt(101), random.nextInt(111), random
                 .nextInt(121)));
-        String rand = String.valueOf(getRandomString(captureType,random.nextInt(randStrings[captureType].length())));
+        String rand = String.valueOf(getRandomString(captureType, random.nextInt(randStrings[captureType].length())));
         randomString += rand;
         g.translate(random.nextInt(3), random.nextInt(3));
         g.drawString(rand, 13 * i, 16);
@@ -128,7 +145,68 @@ public class CaptureUtil {
     /**
      * 获取随机的字符
      */
-    public  static String getRandomString(int captureType, int num) {
+    private static String getRandomString(int captureType, int num) {
         return String.valueOf(randStrings[captureType].charAt(num));
+    }
+
+    private static String setCookie(HttpServletResponse response, Cookie[] cookies, int expSeconds) {
+        Cookie cookie = getCookiesByKey(cookies, "capture");
+        String captureKey = "";
+        if (null != cookie) {
+            captureKey = cookie.getValue();
+        }
+
+        if (null == cookie || StringUtils.isEmpty(captureKey)) {
+            captureKey = "capture" + UUID.randomUUID().toString();
+            cookie = new Cookie("capture", captureKey);
+        }
+
+        cookie.setPath("/");
+        cookie.setMaxAge(expSeconds);
+        response.addCookie(cookie);
+        return captureKey;
+    }
+
+    private static Cookie getCookiesByKey(Cookie[] cookies, String keyName) {
+        if (null == cookies) {
+            return null;
+        } else {
+            for (int i = 0; i < cookies.length; ++i) {
+                Cookie c = cookies[i];
+                if (c.getName().equalsIgnoreCase(keyName)) {
+                    return c;
+                }
+            }
+
+            return null;
+        }
+    }
+
+    /**
+     * 校验校验码
+     * @param verifyCode
+     * @param redisService
+     * @param request
+     * @return
+     */
+    public static boolean verifyCode(String verifyCode,RedisService redisService,HttpServletRequest request){
+        Cookie cookie = getCookiesByKey(request.getCookies(),"capture");
+        if(cookie == null){
+            return false;
+        }
+        String captureKey = cookie.getValue();
+        if(StringUtil.isEmpty(captureKey)){
+            return false;
+        }
+        String captureValue = (String) redisService.get(captureKey);
+        //清除校验码
+        redisService.remove(captureKey);
+        if(StringUtil.isEmpty(captureValue)){
+            return false;
+        }
+        if(verifyCode.equalsIgnoreCase(captureValue)){
+            return true;
+        }
+        return false;
     }
 }

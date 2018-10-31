@@ -11,11 +11,11 @@ public class UserCondition extends BaseCondition implements Serializable {
 	/**
 	 * 用户编号
 	*/
-	private String userCode;
+	private String userId;
 	/**
 	 * 用户编号列表
 	*/
-	private List<String> userCodeList;
+	private List<String> userIdList;
 	/**
 	 * 昵称，可用作登录验证
 	*/

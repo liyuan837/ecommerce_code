@@ -1,6 +1,8 @@
 package com.liyuan.ecommerce.util;
 
 import com.liyuan.ecommerce.domain.exception.eusercenterException;
+import com.liyuan.ecommerce.domain.po.user.UserPo;
+import com.liyuan.ecommerce.vo.user.LoginUserVo;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
@@ -20,21 +22,20 @@ public class JwtUtil {
      * 生成token
      * @return
      */
-    public static String generateToken(JwtUser jwtUser){
+    public static String generateUserToken(LoginUserVo loginUserVo){
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
         Date startTime = new Date(System.currentTimeMillis());
-        Date expireTime = new Date(startTime.getTime()+ 60 * 1000 * 60 * 24);//设置token失效时间:24小时
-        Date outDate = new Date(startTime.getTime() + 60*1000*60);//自定义会话超时时间：1小时
+        //设置token失效时间:24小时
+        Date expireTime = new Date(startTime.getTime()+ 60 * 1000 * 60 * 24);
         JwtBuilder builder = Jwts.builder()
-                .setHeaderParam("typ", "JWT")    //设置header
+                .setHeaderParam("typ", "JWT")
                 .setHeaderParam("alg", "HS256")
                 .setIssuedAt(startTime)
                 //设置失效时间
                 .setExpiration(expireTime)
-                //设置会话超时时间
-                .claim("expiration",outDate.getTime())
-                .claim("username", jwtUser.getUsername())   //设置payload的键值对
-                .claim("usercode", jwtUser.getUsercode())
+                .claim("userId", loginUserVo.getUserId())
+                .claim("userCode", loginUserVo.getUserCode())
+                .claim("userRole",loginUserVo.getUserRoleId())
                 .signWith(signatureAlgorithm, key);    //签名，需要算法和key
         String token = builder.compact();
         return token;

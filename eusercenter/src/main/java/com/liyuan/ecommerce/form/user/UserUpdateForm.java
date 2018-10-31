@@ -15,7 +15,7 @@ public class UserUpdateForm implements Serializable {
 
 	@ApiModelProperty(value = "用户编号", required = true)
 	@NotEmpty(message = "用户编号不能为空")
-	private String userCode;
+	private String userId;
 
 	@ApiModelProperty(value = "昵称，可用作登录验证")
 	private String nickName;

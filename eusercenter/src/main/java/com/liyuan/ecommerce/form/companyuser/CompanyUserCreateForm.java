@@ -47,10 +47,10 @@ public class CompanyUserCreateForm implements Serializable {
 	private String companyId;
 
 	@ApiModelProperty(value = "添加人")
-	private String addUserCode;
+	private String addUserId;
 
 	@ApiModelProperty(value = "修改操作人")
-	private String optUserCode;
+	private String optUserId;
 
 	@ApiModelProperty(value = "状态，1正常，0注销")
 	private Integer state;

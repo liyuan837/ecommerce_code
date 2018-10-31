@@ -41,10 +41,10 @@ public class MemberLevelQueryForm extends BaseQueryForm implements Serializable 
 	private Date maxAddTime;
 
 	@ApiModelProperty(value = "添加人")
-	private String addUserCode;
+	private String addUserId;
 
 	@ApiModelProperty(value = "修改操作人")
-	private String optUserCode;
+	private String optUserId;
 
 	@ApiModelProperty(value = "状态，1启用，0禁用")
 	private Integer state;

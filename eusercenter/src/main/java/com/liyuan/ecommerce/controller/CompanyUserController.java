@@ -1,8 +1,13 @@
 package com.liyuan.ecommerce.controller;
 
+import com.liyuan.ecommerce.constants.SystemConstants;
+import com.liyuan.ecommerce.constants.UserState;
+import com.liyuan.ecommerce.constants.UserType;
+import com.liyuan.ecommerce.domain.condition.user.UserCondition;
 import com.liyuan.ecommerce.domain.po.companyuser.CompanyUserPo;
 import com.liyuan.ecommerce.domain.condition.companyuser.CompanyUserCondition;
 import com.liyuan.ecommerce.form.companyuser.*;
+import com.liyuan.ecommerce.service.UserService;
 import com.liyuan.ecommerce.vo.companyuser.CompanyUserVo;
 import com.liyuan.ecommerce.service.CompanyUserService;
 import com.liyuan.ecommerce.domain.exception.eusercenterException;
@@ -21,11 +26,14 @@ import java.util.Date;
 
 @RestController
 @RequestMapping("/companyuser")
-@Api(value = "/companyuser", description = "商家用户表")
+@Api(value = "/companyuser", description = "商家用户管理")
 public class CompanyUserController extends BaseController {
 
 	@Autowired
 	private CompanyUserService companyUserService;
+
+	@Autowired
+	private UserService userService;
 
 	@ApiOperation(value = "查询商家用户表",notes = "根据ID查询商家用户表",httpMethod = "GET")
 	@GetMapping(value = "/query")
@@ -67,6 +75,18 @@ public class CompanyUserController extends BaseController {
 		return getSuccessResult(getPageListResponse(condition.getPageNum(),condition.getPageSize(),count,voList));
 	}
 
+    @ApiOperation(value = "注册新用户",notes = "注册新用户",httpMethod = "POST")
+    @PostMapping(value = "/register")
+    public ResponseEntity<CompanyUserVo> register(@RequestBody@Valid CompanyUserRegisterForm form) throws eusercenterException {
+        //[1]校验user表用户是否存在
+        checkRegisterForm(form);
+
+        //[2]保存用户信息
+        CompanyUserVo vo = companyUserService.registerUser(form);
+
+        return getSuccessResult(vo);
+    }
+
 	@ApiOperation(value = "新增商家用户表",notes = "新增商家用户表",httpMethod = "POST")
 	@PostMapping(value = "/add")
 	public ResponseEntity<CompanyUserVo> add(@RequestBody@Valid CompanyUserCreateForm form) throws eusercenterException {
@@ -95,4 +115,23 @@ public class CompanyUserController extends BaseController {
 		return getSuccessResult();
 	}
 
+	private void checkRegisterForm(CompanyUserRegisterForm form){
+	    //[1]用户名校验
+        UserCondition condition = new UserCondition();
+        condition.setNickName(form.getNickName());
+        condition.setUserType(UserType.COMPANY_USER);
+        condition.setIsDelete(SystemConstants.UNDELETED);
+
+        Integer count = userService.queryCount(condition);
+        if(count > 0){
+            throw new eusercenterException("昵称已经存在");
+        }
+        //[2]手机号校验
+        condition.setNickName(null);
+        condition.setPhone(form.getPhone());
+        count = userService.queryCount(condition);
+        if(count > 0){
+            throw new eusercenterException("手机号已经存在");
+        }
+    }
 }

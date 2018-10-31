@@ -116,11 +116,11 @@ public class CompanyCondition extends BaseCondition implements Serializable {
 	/**
 	 * 添加人
 	*/
-	private String addUserCode;
+	private String addUserId;
 	/**
 	 * 修改操作人
 	*/
-	private String optUserCode;
+	private String optUserId;
 	/**
 	 * 业务状态，0待审核，1正常，审核通过，-1审核未通过
 	*/

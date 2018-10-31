@@ -32,14 +32,14 @@ public class MemberLevelVo implements Serializable {
 	private Date addTime;
 
 	@ApiModelProperty(value = "添加人")
-	private String addUserCode;
+	private String addUserId;
 
 	@ApiModelProperty(value = "修改操作时间")
 	@JsonFormat(pattern= DateUtil.FORMAT,timezone="GMT+8")
 	private Date optTime;
 
 	@ApiModelProperty(value = "修改操作人")
-	private String optUserCode;
+	private String optUserId;
 
 	@ApiModelProperty(value = "状态，1启用，0禁用")
 	private Integer state;

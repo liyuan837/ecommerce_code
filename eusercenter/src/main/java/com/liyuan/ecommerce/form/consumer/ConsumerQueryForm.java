@@ -8,8 +8,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
@@ -70,10 +68,10 @@ public class ConsumerQueryForm extends BaseQueryForm implements Serializable {
 	private Date maxAddTime;
 
 	@ApiModelProperty(value = "添加人")
-	private String addUserCode;
+	private String addUserId;
 
 	@ApiModelProperty(value = "修改操作人")
-	private String optUserCode;
+	private String optUserId;
 
 	@ApiModelProperty(value = "状态，1正常，0注销")
 	private Integer state;
