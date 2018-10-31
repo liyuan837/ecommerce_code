@@ -157,6 +157,14 @@ public class UserController extends BaseController {
         //[4]生成token
         String token = JwtUtil.generateUserToken(loginUserVo);
         loginUserVo.setToken(token);
+
+        //[5]更新登录信息
+        UserPo userPo = new UserPo();
+        userPo.setUserId(loginUserPo.getUserId());
+        userPo.setLastLoginIp(RequestUtil.getIp(request));
+        userPo.setLastLoginTime(new Date());
+        userService.update(userPo);
+
         return getSuccessResult(loginUserVo);
     }
 

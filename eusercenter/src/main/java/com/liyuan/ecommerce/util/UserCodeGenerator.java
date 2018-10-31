@@ -11,6 +11,6 @@ import java.util.Random;
 public class UserCodeGenerator {
     public static String generateUserCode(String prefix){
         Random random = new Random(System.currentTimeMillis());
-        return prefix + random.nextInt();
+        return prefix + Math.abs(random.nextInt());
     }
 }

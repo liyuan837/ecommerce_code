@@ -110,6 +110,8 @@ CREATE TABLE `tb_company_user` (
 
 /*Data for the table `tb_company_user` */
 
+insert  into `tb_company_user`(`id`,`user_code`,`nick_name`,`real_name`,`phone`,`type`,`sex`,`birthday`,`age`,`header_img`,`user_role_id`,`company_id`,`add_time`,`add_user_id`,`opt_time`,`opt_user_id`,`state`,`is_delete`) values ('CU10001','CU403734033','冰雪之华','王昭君','18260631811',1,2,NULL,20,NULL,NULL,NULL,'2018-10-31 19:25:31',NULL,'2018-10-31 19:25:31',NULL,1,0);
+
 /*Table structure for table `tb_consumer` */
 
 DROP TABLE IF EXISTS `tb_consumer`;
@@ -584,7 +586,7 @@ CREATE TABLE `tb_sequence` (
 
 /*Data for the table `tb_sequence` */
 
-insert  into `tb_sequence`(`NAME`,`current_value`,`increment`) values ('company_id',10001,1),('company_user_id',10001,1),('store_id',10001,1),('store_user_id',10001,1),('system_user_id',10001,1);
+insert  into `tb_sequence`(`NAME`,`current_value`,`increment`) values ('company_id',10000,1),('company_user_id',10001,1),('store_id',10000,1),('store_user_id',10000,1),('system_user_id',10001,1);
 
 /*Table structure for table `tb_store` */
 
@@ -679,7 +681,7 @@ CREATE TABLE `tb_system_user` (
 
 /*Data for the table `tb_system_user` */
 
-insert  into `tb_system_user`(`id`,`user_code`,`nick_name`,`real_name`,`phone`,`type`,`sex`,`birthday`,`age`,`header_img`,`user_role_id`,`add_time`,`add_user_id`,`opt_time`,`opt_user_id`,`state`,`is_delete`) values ('PU10001','9527443','演得太逼真','李袁','18260631810',1,1,'0000-00-00 00:00:00',27,NULL,NULL,'2018-10-10 15:00:00',NULL,'2018-10-10 15:00:00',NULL,NULL,NULL);
+insert  into `tb_system_user`(`id`,`user_code`,`nick_name`,`real_name`,`phone`,`type`,`sex`,`birthday`,`age`,`header_img`,`user_role_id`,`add_time`,`add_user_id`,`opt_time`,`opt_user_id`,`state`,`is_delete`) values ('PU10001','9527443','演得太逼真','李袁','18260631810',1,1,NULL,27,NULL,NULL,'2018-10-10 15:00:00',NULL,'2018-10-10 15:00:00',NULL,NULL,NULL);
 
 /*Table structure for table `tb_user` */
 
@@ -700,7 +702,7 @@ CREATE TABLE `tb_user` (
 
 /*Data for the table `tb_user` */
 
-insert  into `tb_user`(`user_id`,`nick_name`,`phone`,`password`,`user_type`,`last_login_time`,`last_login_ip`,`state`,`is_delete`) values ('PU10001','演得太逼真','18260631810','123456',1,NULL,NULL,1,0);
+insert  into `tb_user`(`user_id`,`nick_name`,`phone`,`password`,`user_type`,`last_login_time`,`last_login_ip`,`state`,`is_delete`) values ('CU10001','冰雪之华','18260631811','e10adc3949ba59abbe56e057f20f883e',2,NULL,NULL,1,0),('PU10001','演得太逼真','18260631810','123456',1,'2018-10-31 19:07:50','0:0:0:0:0:0:0:1',1,0);
 
 /* Function  structure for function  `currval` */
 

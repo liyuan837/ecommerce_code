@@ -190,7 +190,10 @@
 	</select>
 
 	<insert id="insert" parameterType="com.liyuan.ecommerce.domain.po.companyuser.CompanyUserPo">
-		INSERT INTO tb_company_user(  
+        <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.String">
+            select CONCAT('CU',NEXTVAL('company_user_id'))
+        </selectKey>
+        INSERT INTO tb_company_user(
 			id
 		<if test="userCode != null">
 			,user_code
@@ -244,8 +247,8 @@
 			,is_delete
 		</if>
 		)
-		VALUES( 
-			#{id,jdbcType=VARCHAR}
+		VALUES(
+            #{id,jdbcType=VARCHAR}
 		<if test="userCode != null">
 			,#{userCode,jdbcType=VARCHAR}
 		</if>

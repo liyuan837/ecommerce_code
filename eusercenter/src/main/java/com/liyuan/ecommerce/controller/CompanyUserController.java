@@ -1,5 +1,6 @@
 package com.liyuan.ecommerce.controller;
 
+import com.liyuan.ecommerce.annotation.NotToken;
 import com.liyuan.ecommerce.constants.SystemConstants;
 import com.liyuan.ecommerce.constants.UserState;
 import com.liyuan.ecommerce.constants.UserType;
@@ -75,6 +76,7 @@ public class CompanyUserController extends BaseController {
 		return getSuccessResult(getPageListResponse(condition.getPageNum(),condition.getPageSize(),count,voList));
 	}
 
+	@NotToken
     @ApiOperation(value = "注册新用户",notes = "注册新用户",httpMethod = "POST")
     @PostMapping(value = "/register")
     public ResponseEntity<CompanyUserVo> register(@RequestBody@Valid CompanyUserRegisterForm form) throws eusercenterException {

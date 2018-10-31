@@ -19,11 +19,12 @@ import org.springframework.cache.annotation.Cacheable;
 import com.liyuan.ecommerce.domain.exception.eusercenterException;
 import com.liyuan.ecommerce.service.CompanyUserService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
 @Service
-@CacheConfig(cacheNames = "com.liyuan.ecommerce.domain.po.companyuser")
+@Transactional
 public class CompanyUserServiceImpl extends BaseServiceImpl<CompanyUserPo, CompanyUserCondition, CompanyUserMapper> implements CompanyUserService {
 
     @Autowired
@@ -39,6 +40,7 @@ public class CompanyUserServiceImpl extends BaseServiceImpl<CompanyUserPo, Compa
         //保存companyUser
         CompanyUserPo po = CopyUtil.transfer(form, CompanyUserPo.class);
         po.setUserCode(UserCodeGenerator.generateUserCode("CU"));
+        po.setType(1);
         po.setIsDelete(SystemConstants.UNDELETED);
         po.setState(UserState.NORMAL);
         po.setAddTime(optTime);
@@ -47,6 +49,7 @@ public class CompanyUserServiceImpl extends BaseServiceImpl<CompanyUserPo, Compa
 
         //保存user
         UserPo userPo = new UserPo();
+        userPo.setUserId(po.getId());
         userPo.setUserType(UserType.COMPANY_USER);
         userPo.setNickName(form.getNickName());
         userPo.setPhone(form.getPhone());
@@ -54,5 +57,9 @@ public class CompanyUserServiceImpl extends BaseServiceImpl<CompanyUserPo, Compa
         userPo.setIsDelete(SystemConstants.UNDELETED);
         userPo.setState(UserState.NORMAL);
         userMapper.insert(userPo);
+
+        CompanyUserVo vo = CopyUtil.transfer(po,CompanyUserVo.class);
+
+        return vo;
     }
 }
