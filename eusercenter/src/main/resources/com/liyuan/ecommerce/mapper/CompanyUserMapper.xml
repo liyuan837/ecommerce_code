@@ -168,7 +168,7 @@
 		SELECT 
 		<include refid="fieldSql"/>
 		  FROM tb_company_user t 
-		 WHERE t.id = #{id,jdbcType = VARCHAR} 
+		 WHERE t.id = #{id,jdbcType = VARCHAR} AND t.is_delete = 0
 	</select>
 
 	<select id="count" parameterType="com.liyuan.ecommerce.domain.condition.companyuser.CompanyUserCondition" resultType="Integer" >

@@ -9,6 +9,7 @@ import com.liyuan.ecommerce.domain.po.companyuser.CompanyUserPo;
 import com.liyuan.ecommerce.domain.condition.companyuser.CompanyUserCondition;
 import com.liyuan.ecommerce.form.companyuser.*;
 import com.liyuan.ecommerce.service.UserService;
+import com.liyuan.ecommerce.util.JwtUtil;
 import com.liyuan.ecommerce.vo.companyuser.CompanyUserVo;
 import com.liyuan.ecommerce.service.CompanyUserService;
 import com.liyuan.ecommerce.domain.exception.eusercenterException;
@@ -17,6 +18,9 @@ import com.liyuan.ecommerce.domain.response.ResponseEntity;
 import com.liyuan.ecommerce.domain.response.PageListResponse;
 import java.util.List;
 import java.util.ArrayList;
+
+import com.liyuan.ecommerce.vo.systemuser.SystemUserVo;
+import com.liyuan.ecommerce.vo.user.LoginUserVo;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import io.swagger.annotations.Api;
@@ -89,15 +93,21 @@ public class CompanyUserController extends BaseController {
         return getSuccessResult(vo);
     }
 
-	@ApiOperation(value = "新增商家用户表",notes = "新增商家用户表",httpMethod = "POST")
+	@ApiOperation(value = "添加商家用户",notes = "添加商家用户",httpMethod = "POST")
 	@PostMapping(value = "/add")
-	public ResponseEntity<CompanyUserVo> add(@RequestBody@Valid CompanyUserCreateForm form) throws eusercenterException {
-		Date optTime = new Date();
-		CompanyUserPo po = CopyUtil.transfer(form, CompanyUserPo.class);
-		po.setAddTime(optTime);
-		companyUserService.insert(po);
-		CompanyUserVo vo = CopyUtil.transfer(po, CompanyUserVo.class);
-		return getSuccessResult(vo);
+	public ResponseEntity<CompanyUserVo> add(@RequestHeader("Authorization") String authorization, @RequestBody@Valid CompanyUserCreateForm form) throws eusercenterException {
+        //[1]判断用户类型
+        LoginUserVo loginUserVo = JwtUtil.checkUserLogin(authorization);
+        if(loginUserVo.getUserType() != UserType.COMPANY_USER || loginUserVo.getType() != UserType.SUPERMANAGER){
+            return getFailResult("您不是企业超级管理员，无法添加企业用户");
+        }
+
+        //[2]验证表单
+        checkCreateForm(form);
+
+        //[3]添加用户
+        CompanyUserVo vo = companyUserService.addCompanyUser(form,loginUserVo);
+        return getSuccessResult(vo);
 	}
 
 	@ApiOperation(value = "修改商家用户表",notes = "修改商家用户表",httpMethod = "POST")
@@ -119,6 +129,26 @@ public class CompanyUserController extends BaseController {
 
 	private void checkRegisterForm(CompanyUserRegisterForm form){
 	    //[1]用户名校验
+        UserCondition condition = new UserCondition();
+        condition.setNickName(form.getNickName());
+        condition.setUserType(UserType.COMPANY_USER);
+        condition.setIsDelete(SystemConstants.UNDELETED);
+
+        Integer count = userService.queryCount(condition);
+        if(count > 0){
+            throw new eusercenterException("昵称已经存在");
+        }
+        //[2]手机号校验
+        condition.setNickName(null);
+        condition.setPhone(form.getPhone());
+        count = userService.queryCount(condition);
+        if(count > 0){
+            throw new eusercenterException("手机号已经存在");
+        }
+    }
+
+    private void checkCreateForm(CompanyUserCreateForm form){
+        //[1]用户名校验
         UserCondition condition = new UserCondition();
         condition.setNickName(form.getNickName());
         condition.setUserType(UserType.COMPANY_USER);

@@ -13,4 +13,12 @@ public interface UserType {
     int SYSTEM_USER = 1;
     int COMPANY_USER = 2;
     int STORE_USER = 3;
+
+    /**
+     * 内部用户身份，
+     * 1负责人、超级管理员
+     * 2普通员工
+     */
+    int SUPERMANAGER = 1;
+    int COMMONMANAGER = 2;
 }

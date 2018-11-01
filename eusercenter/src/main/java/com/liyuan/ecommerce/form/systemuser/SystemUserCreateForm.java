@@ -8,24 +8,25 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import javax.validation.constraints.NotNull;
+
 @Data
 @ApiModel(description = "平台用户表")
 public class SystemUserCreateForm implements Serializable {
 
-	@ApiModelProperty(value = "用户编号")
-	private String userCode;
-
 	@ApiModelProperty(value = "昵称，可用作登录验证")
+    @NotNull(message = "昵称不能为空")
 	private String nickName;
 
 	@ApiModelProperty(value = "真实姓名")
 	private String realName;
 
-	@ApiModelProperty(value = "手机号，可用作登录验证")
-	private String phone;
+    @ApiModelProperty(value = "登录密码")
+    private String password;
 
-	@ApiModelProperty(value = "商家用户类型，1商家负责人，2其他")
-	private Integer type;
+	@ApiModelProperty(value = "手机号，可用作登录验证")
+    @NotNull(message = "手机号不能为空")
+	private String phone;
 
 	@ApiModelProperty(value = "性别，0未知，1男2女")
 	private Integer sex;
@@ -42,17 +43,5 @@ public class SystemUserCreateForm implements Serializable {
 
 	@ApiModelProperty(value = "用户角色id")
 	private Integer userRoleId;
-
-	@ApiModelProperty(value = "添加人")
-	private String addUserId;
-
-	@ApiModelProperty(value = "修改操作人")
-	private String optUserId;
-
-	@ApiModelProperty(value = "状态，1正常，0注销")
-	private Integer state;
-
-	@ApiModelProperty(value = "是否删除")
-	private Integer isDelete;
 
 }

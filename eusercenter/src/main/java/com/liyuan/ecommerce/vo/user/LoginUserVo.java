@@ -34,6 +34,9 @@ public class LoginUserVo implements Serializable {
     @ApiModelProperty(value = "用户类型，1平台人员，2商家人员，3店铺人员")
     private Integer userType;
 
+    @ApiModelProperty(value = "1为负责人，2为其他")
+    private Integer type;
+
     @ApiModelProperty(value = "用户角色id")
     private Integer userRoleId;
 

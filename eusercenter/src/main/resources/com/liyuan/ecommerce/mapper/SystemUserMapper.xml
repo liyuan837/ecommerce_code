@@ -182,7 +182,10 @@
 	</select>
 
 	<insert id="insert" parameterType="com.liyuan.ecommerce.domain.po.systemuser.SystemUserPo">
-		INSERT INTO tb_system_user(  
+        <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.String">
+            select CONCAT('PU',NEXTVAL('system_user_id'))
+        </selectKey>
+        INSERT INTO tb_system_user(
 			id
 		<if test="userCode != null">
 			,user_code

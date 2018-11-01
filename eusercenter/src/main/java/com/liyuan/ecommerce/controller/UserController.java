@@ -114,6 +114,7 @@ public class UserController extends BaseController {
                     loginUserVo.setUserCode(systemUserPo.getUserCode());
                     loginUserVo.setHeaderImg(systemUserPo.getHeaderImg());
                     loginUserVo.setRealName(systemUserPo.getRealName());
+                    loginUserVo.setType(systemUserPo.getType());
 
                     CompanyPo platFormPo = companyService.query("P10000");
                     CompanySimpleVo platFormVo = CopyUtil.transfer(platFormPo,CompanySimpleVo.class);
@@ -128,6 +129,7 @@ public class UserController extends BaseController {
                     loginUserVo.setUserCode(companyUserPo.getUserCode());
                     loginUserVo.setHeaderImg(companyUserPo.getHeaderImg());
                     loginUserVo.setRealName(companyUserPo.getRealName());
+                    loginUserVo.setType(companyUserPo.getType());
 
                     CompanyPo companyPo = companyService.query(companyUserPo.getCompanyId());
                     CompanySimpleVo companyVo = CopyUtil.transfer(companyPo,CompanySimpleVo.class);
@@ -143,6 +145,7 @@ public class UserController extends BaseController {
                     loginUserVo.setUserCode(storeUserPo.getUserCode());
                     loginUserVo.setHeaderImg(storeUserPo.getHeaderImg());
                     loginUserVo.setRealName(storeUserPo.getRealName());
+                    loginUserVo.setType(storeUserPo.getType());
 
                     StorePo storePo = storeService.query(storeUserPo.getStoreId());
                     StoreSimpleVo storeVo = CopyUtil.transfer(storePo,StoreSimpleVo.class);

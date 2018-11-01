@@ -36,6 +36,8 @@ public class JwtUtil {
                 .claim("userId", loginUserVo.getUserId())
                 .claim("userCode", loginUserVo.getUserCode())
                 .claim("userRole",loginUserVo.getUserRoleId())
+                .claim("userType",loginUserVo.getUserType())
+                .claim("type",loginUserVo.getType())
                 .signWith(signatureAlgorithm, key);    //签名，需要算法和key
         String token = builder.compact();
         return token;
@@ -62,29 +64,26 @@ public class JwtUtil {
      * @param authorization
      * @return
      */
-    public static JwtUser checkLogin(String authorization) throws eusercenterException {
-        JwtUser jwtUser;
+    public static LoginUserVo checkUserLogin(String authorization) throws eusercenterException {
+        LoginUserVo loginUserVo;
 
         Claims claims = getClaims(authorization);
         if (claims == null) {
             throw new eusercenterException("无效token");
         }
 
-        String usercode = (String) claims.get("usercode");
-        if(usercode == null || usercode.equals("")){
+        String userId = (String) claims.get("userId");
+        if(userId == null || userId.equals("")){
             throw new eusercenterException("会话中的用户编号为空");
         }
+        loginUserVo = new LoginUserVo();
+        loginUserVo.setUserId(userId);
+        loginUserVo.setUserCode((String) claims.get("userCode"));
+        loginUserVo.setUserRoleId((Integer) claims.get("userRole"));
+        loginUserVo.setUserType((Integer) claims.get("userType"));
+        loginUserVo.setType((Integer) claims.get("type"));
 
-        Long expiration = (Long) claims.get("expiration");
-        if(expiration < (new Date().getTime())){
-            throw new eusercenterException("会话超时，请重新登陆");
-        }
-
-        jwtUser = new JwtUser();
-        jwtUser.setUsercode(usercode);
-        jwtUser.setUsername((String) claims.get("username"));
-
-        return jwtUser;
+        return loginUserVo;
     }
 
 }

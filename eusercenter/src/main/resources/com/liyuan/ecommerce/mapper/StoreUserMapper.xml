@@ -168,7 +168,7 @@
 		SELECT 
 		<include refid="fieldSql"/>
 		  FROM tb_store_user t 
-		 WHERE t.id = #{id,jdbcType = VARCHAR} 
+		 WHERE t.id = #{id,jdbcType = VARCHAR} AND t.is_delete = 0
 	</select>
 
 	<select id="count" parameterType="com.liyuan.ecommerce.domain.condition.storeuser.StoreUserCondition" resultType="Integer" >
@@ -190,7 +190,10 @@
 	</select>
 
 	<insert id="insert" parameterType="com.liyuan.ecommerce.domain.po.storeuser.StoreUserPo">
-		INSERT INTO tb_store_user(  
+        <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.String">
+            select CONCAT('SU',NEXTVAL('store_user_id'))
+        </selectKey>
+        INSERT INTO tb_store_user(
 			id
 		<if test="userCode != null">
 			,user_code

@@ -1,8 +1,18 @@
 package com.liyuan.ecommerce.controller;
 
+import com.liyuan.ecommerce.constants.SystemConstants;
+import com.liyuan.ecommerce.constants.UserType;
+import com.liyuan.ecommerce.domain.condition.company.CompanyCondition;
+import com.liyuan.ecommerce.domain.po.company.CompanyPo;
+import com.liyuan.ecommerce.domain.po.companyuser.CompanyUserPo;
 import com.liyuan.ecommerce.domain.po.store.StorePo;
 import com.liyuan.ecommerce.domain.condition.store.StoreCondition;
+import com.liyuan.ecommerce.domain.po.storeuser.StoreUserPo;
+import com.liyuan.ecommerce.form.company.CompanyRegisterForm;
 import com.liyuan.ecommerce.form.store.*;
+import com.liyuan.ecommerce.service.StoreUserService;
+import com.liyuan.ecommerce.util.JwtUtil;
+import com.liyuan.ecommerce.vo.company.CompanyVo;
 import com.liyuan.ecommerce.vo.store.StoreVo;
 import com.liyuan.ecommerce.service.StoreService;
 import com.liyuan.ecommerce.domain.exception.eusercenterException;
@@ -11,6 +21,8 @@ import com.liyuan.ecommerce.domain.response.ResponseEntity;
 import com.liyuan.ecommerce.domain.response.PageListResponse;
 import java.util.List;
 import java.util.ArrayList;
+
+import com.liyuan.ecommerce.vo.user.LoginUserVo;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import io.swagger.annotations.Api;
@@ -26,6 +38,9 @@ public class StoreController extends BaseController {
 
 	@Autowired
 	private StoreService storeService;
+
+    @Autowired
+    private StoreUserService storeUserService;
 
 	@ApiOperation(value = "查询店铺表",notes = "根据ID查询店铺表",httpMethod = "GET")
 	@GetMapping(value = "/query")
@@ -67,6 +82,32 @@ public class StoreController extends BaseController {
 		return getSuccessResult(getPageListResponse(condition.getPageNum(),condition.getPageSize(),count,voList));
 	}
 
+    @ApiOperation(value = "注册新店铺",notes = "注册新店铺",httpMethod = "POST")
+    @PostMapping(value = "/register")
+    public ResponseEntity<StoreVo> register(@RequestHeader("Authorization") String authorization,@RequestBody@Valid StoreRegisterForm form) throws eusercenterException {
+        LoginUserVo loginUserVo = JwtUtil.checkUserLogin(authorization);
+        if(loginUserVo.getUserType() != UserType.STORE_USER || loginUserVo.getType() != UserType.SUPERMANAGER){
+            return getFailResult("您不是店铺超级管理员，无法注册店铺");
+        }
+        //[0]判断该用户是否已经关联店铺
+        StoreUserPo storeUserPo = storeUserService.query(loginUserVo.getUserId());
+        if(storeUserPo == null){
+            return getFailResult("您的店铺用户信息不存在");
+        }
+        StorePo storePo = storeService.query(storeUserPo.getStoreId());
+        if(storePo != null){
+            return getFailResult("该账号已和"+storePo.getStoreName()+ "关联");
+        }
+
+        //[1]校验店铺是否存在
+        checkRegisterForm(form);
+
+        //[2]保存企业信息
+        StoreVo vo = storeService.register(form,loginUserVo);
+
+        return getSuccessResult(vo);
+    }
+
 	@ApiOperation(value = "新增店铺表",notes = "新增店铺表",httpMethod = "POST")
 	@PostMapping(value = "/add")
 	public ResponseEntity<StoreVo> add(@RequestBody@Valid StoreCreateForm form) throws eusercenterException {
@@ -95,4 +136,17 @@ public class StoreController extends BaseController {
 		return getSuccessResult();
 	}
 
+    /**
+     * 店铺注册只校验企业名是否存在
+     * @param form
+     */
+    private void checkRegisterForm(StoreRegisterForm form){
+        StoreCondition condition = new StoreCondition();
+        condition.setStoreName(form.getStoreName());
+        condition.setIsDelete(SystemConstants.UNDELETED);
+        Integer count = storeService.queryCount(condition);
+        if(count > 0){
+            throw new eusercenterException("该店铺名称已存在");
+        }
+    }
 }

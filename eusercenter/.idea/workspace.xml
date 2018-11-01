@@ -15,8 +15,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-980">
-              <caret line="81" column="53" lean-forward="true" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
+            <state relative-caret-position="297">
+              <caret line="118" column="74" lean-forward="true" selection-start-line="118" selection-start-column="74" selection-end-line="118" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -25,18 +25,8 @@
       <file leaf-file-name="CompanyUserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/CompanyUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="82" column="26" lean-forward="true" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyUserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/CompanyUserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="13" column="54" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="54" />
+            <state relative-caret-position="129">
+              <caret line="97" column="99" lean-forward="false" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -45,78 +35,78 @@
       <file leaf-file-name="CompanyUserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/CompanyUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="41" column="39" lean-forward="false" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+            <state relative-caret-position="229">
+              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserCodeGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/UserCodeGenerator.java">
+      <file leaf-file-name="StoreUserCreateForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/storeuser/StoreUserCreateForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+            <state relative-caret-position="325">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyUserMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/CompanyUserMapper.xml">
+      <file leaf-file-name="StoreUserRegisterForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/storeuser/StoreUserRegisterForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="250" column="33" lean-forward="false" selection-start-line="250" selection-start-column="33" selection-end-line="250" selection-end-column="33" />
-              <folding>
-                <marker date="1540985071397" expanded="true" signature="5620:5726" ph="SELECT FROM tb_company_user" />
-                <marker date="1540985071397" expanded="true" signature="5872:5918" ph="SELECT count... tb_company_user" />
-                <marker date="1540985071397" expanded="true" signature="6125:6189" ph="SELECT FROM tb_company_user" />
-                <marker date="1540985071397" expanded="true" signature="6444:8671" ph="select CONCA... " />
-                <marker date="1540985071397" expanded="true" signature="6451:8671" ph="SELECT uuid(... " />
-                <marker date="1540985071397" expanded="true" signature="6520:8671" ph="INSERT INTO tb_company_user... " />
-                <marker date="1540985071397" expanded="true" signature="8781:10538" ph="UPDATE tb_co... " />
-                <marker date="1540985071397" expanded="true" signature="10599:10664" ph="DELETE FROM " />
-                <marker date="1540985071397" expanded="true" signature="10800:10827" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1031.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/1031.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="2" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+            <state relative-caret-position="147">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MD5Util.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/MD5Util.java">
+      <file leaf-file-name="StoreUserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/StoreUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="151">
+              <caret line="108" column="50" lean-forward="false" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/UserType.java">
+      <file leaf-file-name="StoreUserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/StoreUserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="306">
+              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyUserRegisterForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/companyuser/CompanyUserRegisterForm.java">
+      <file leaf-file-name="StoreUserServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/StoreUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+            <state relative-caret-position="256">
+              <caret line="82" column="47" lean-forward="false" selection-start-line="82" selection-start-column="47" selection-end-line="82" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoreUserQueryForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/storeuser/StoreUserQueryForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-74">
+              <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompanyUserCreateForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/companyuser/CompanyUserCreateForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,48 +137,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/ConsumerExtendController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/UserType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/interceptor/JwtInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/IPUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/Num.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/RequestUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/CaptchaUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/Times.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/CommonController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/ScheduleTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/RedisService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/company/CompanySimpleVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/store/StoreSimpleVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/store/StoreVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/domain/condition/store/StoreCondition.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/domain/po/store/StorePo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/store/StoreCreateForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/store/StoreQueryForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/store/StoreUpdateForm.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/StoreMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/SystemConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/user/LoginUserVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/JwtUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/user/UserLoginForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/CaptureUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/CompanyState.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/UserState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/CompanyUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/MD5Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/companyuser/CompanyUserRegisterForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/CompanyUserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/CompanyUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/UserCodeGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/CompanyUserMapper.xml" />
         <option value="$PROJECT_DIR$/1031.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/company/CompanyRegisterForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/user/LoginUserVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/UserTypeEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/UserType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/JwtUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/CompanyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/CompanyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/CompanyMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/CompanyUserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/CompanyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/StoreState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/storeuser/StoreUserRegisterForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/StoreController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/StoreService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/StoreUserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/store/StoreRegisterForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/StoreType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/StoreServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/StoreMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/systemuser/SystemUserCreateForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/SystemUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/SystemUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/SystemUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/SystemUserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/CompanyUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/CompanyUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/storeuser/StoreUserQueryForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/storeuser/StoreUserCreateForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/StoreUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/StoreUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/companyuser/CompanyUserCreateForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/CompanyUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/StoreUserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -204,7 +203,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="378" />
     <option name="y" value="141" />
     <option name="width" value="1370" />
@@ -274,6 +273,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,14 +284,170 @@
               <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
               <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="storeuser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="SystemUserServiceImpl" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eusercenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eusercenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="liyuan" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,15 +465,15 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="SearchEverywhereHistoryKey" value="userS&#9;FILE&#9;file://G:/我的项目/ecommerce代码/ecommerce_code/eusercenter/src/main/java/com/liyuan/ecommerce/service/SystemUserService.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://G:/我的项目/ecommerce代码/ecommerce_code/eusercenter/src/main/java/com/liyuan/ecommerce/form/storeuser/StoreUserQueryForm.java&#10;userS&#9;FILE&#9;file://G:/我的项目/ecommerce代码/ecommerce_code/eusercenter/src/main/java/com/liyuan/ecommerce/service/SystemUserService.java" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.liyuan.ecommerce.constants" />
+      <recent name="com.liyuan.ecommerce.form.store" />
+      <recent name="com.liyuan.ecommerce.form.storeuser" />
+      <recent name="com.liyuan.ecommerce.form.company" />
       <recent name="com.liyuan.ecommerce.util" />
-      <recent name="com.liyuan.ecommerce.form.companyuser" />
-      <recent name="com.liyuan.ecommerce.vo.store" />
-      <recent name="com.liyuan.ecommerce.vo.company" />
-      <recent name="com.liyuan.ecommerce.vo.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\我的项目\ecommerce代码\ecommerce_code\eusercenter" />
@@ -468,39 +627,40 @@
       <updated>1540886237649</updated>
       <workItem from="1540886241052" duration="10472000" />
       <workItem from="1540946033230" duration="29650000" />
+      <workItem from="1541031884707" duration="19470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40122000" />
+    <option name="totallyTimeSpent" value="59592000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="378" y="141" width="1370" height="484" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26324236" sideWeight="0.49394855" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.48789713" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.48789713" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64215684" sideWeight="0.23748103" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17830046" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.30228758" sideWeight="0.76251894" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3457792" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.30228758" sideWeight="0.76251894" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41956884" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1676876" sideWeight="0.45707658" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28831562" sideWeight="0.45707658" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12824675" sideWeight="0.4795764" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08698941" sideWeight="0.5285412" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5063291" sideWeight="0.4795764" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -521,205 +681,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/RequestUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding>
-            <element signature="e#701#702#0" expanded="false" />
-            <element signature="e#745#746#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/IPUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/company/CompanySimpleVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/store/StoreSimpleVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/store/StoreVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/domain/condition/store/StoreCondition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/domain/po/store/StorePo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/store/StoreCreateForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/store/StoreQueryForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/store/StoreUpdateForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/StoreMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="546" column="9" lean-forward="true" selection-start-line="546" selection-start-column="9" selection-end-line="546" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/StoreController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/SystemUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/SystemConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/domain/condition/company/CompanyCondition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2147">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/domain/condition/consumer/ConsumerCondition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/domain/po/backcategory/BackCategoryPo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/domain/po/consumer/ConsumerPo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/user/UserVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/company/CompanyVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1449">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/user/UserCreateForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/RedisService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
           <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,10 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,15 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/user/LoginUserVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,22 +723,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/JwtUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="37" column="62" lean-forward="false" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/JwtController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/JwtController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/user/UserLoginForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -834,54 +776,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/SystemUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1536">
-          <caret line="287" column="0" lean-forward="true" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
-          <folding>
-            <marker date="1540959976000" expanded="true" signature="5301:5406" ph="SELECT FROM tb_system_user" />
-            <marker date="1540959976000" expanded="true" signature="5550:5595" ph="SELECT count... tb_system_user" />
-            <marker date="1540959976000" expanded="true" signature="5799:5862" ph="SELECT FROM tb_system_user" />
-            <marker date="1540959976000" expanded="true" signature="6023:8038" ph="INSERT INTO tb_system_user... " />
-            <marker date="1540959976000" expanded="true" signature="8146:9798" ph="UPDATE tb_sy... " />
-            <marker date="1540959976000" expanded="true" signature="9859:9923" ph="DELETE FROM " />
-            <marker date="1540959976000" expanded="true" signature="10057:10083" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://E:/JDK8/src.zip!/java/util/Random.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1150">
           <caret line="327" column="15" lean-forward="false" selection-start-line="327" selection-start-column="15" selection-end-line="327" selection-end-column="15" />
-          <folding>
-            <element signature="e#11985#11986#0" expanded="false" />
-            <element signature="e#12016#12017#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/CompanyState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/CompanyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/companyuser/CompanyUserCreateForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,84 +799,348 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/companyuser/CompanyUserRegisterForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/UserCodeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        <state relative-caret-position="273">
+          <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1031.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/company/CompanyRegisterForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-609">
+          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/UserTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/UserType.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/JwtUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="75" column="48" lean-forward="true" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/CompanyState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/vo/user/LoginUserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/CompanyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="261" column="15" lean-forward="true" selection-start-line="261" selection-start-column="15" selection-end-line="261" selection-end-column="15" />
+          <folding>
+            <marker date="1541057742932" expanded="true" signature="9935:10036" ph="SELECT FROM tb_company" />
+            <marker date="1541057742932" expanded="true" signature="9935:10056" ph="SELECT FROM tb_company" />
+            <marker date="1541057742932" expanded="true" signature="10193:10234" ph="SELECT count... tb_company" />
+            <marker date="1541057742932" expanded="true" signature="10429:10488" ph="SELECT FROM tb_company" />
+            <marker date="1541057742932" expanded="true" signature="10805:14556" ph="INSERT INTO tb_company... " />
+            <marker date="1541057742932" expanded="true" signature="14658:17699" ph="UPDATE tb_co... " />
+            <marker date="1541057742932" expanded="true" signature="17760:17820" ph="DELETE FROM " />
+            <marker date="1541057742932" expanded="true" signature="17948:17970" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/CompanyUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="192" column="8" lean-forward="true" selection-start-line="192" selection-start-column="8" selection-end-line="194" selection-end-column="20" />
+          <folding>
+            <marker date="1541057755655" expanded="true" signature="5620:5726" ph="SELECT FROM tb_company_user" />
+            <marker date="1541057755655" expanded="true" signature="5620:5746" ph="SELECT FROM tb_company_user" />
+            <marker date="1541057755655" expanded="true" signature="5891:5937" ph="SELECT count... tb_company_user" />
+            <marker date="1541057755655" expanded="true" signature="6144:6208" ph="SELECT FROM tb_company_user" />
+            <marker date="1541057755655" expanded="true" signature="8800:10557" ph="UPDATE tb_co... " />
+            <marker date="1541057755655" expanded="true" signature="10618:10683" ph="DELETE FROM " />
+            <marker date="1541057755655" expanded="true" signature="10819:10846" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/StoreState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/CompanyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="29" column="48" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="29" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/CompanyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/StoreMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="276" column="0" lean-forward="true" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
+          <folding>
+            <marker date="1541063457405" expanded="true" signature="9405:9504" ph="SELECT FROM tb_store" />
+            <marker date="1541063457405" expanded="true" signature="9405:9524" ph="SELECT FROM tb_store" />
+            <marker date="1541063457405" expanded="true" signature="9657:9696" ph="SELECT count... tb_store" />
+            <marker date="1541063457405" expanded="true" signature="9885:9942" ph="SELECT FROM tb_store" />
+            <marker date="1541063457405" expanded="true" signature="10253:13809" ph="INSERT INTO tb_store... " />
+            <marker date="1541063457405" expanded="true" signature="13907:16794" ph="UPDATE tb_st... " />
+            <marker date="1541063457405" expanded="true" signature="16855:16913" ph="DELETE FROM " />
+            <marker date="1541063457405" expanded="true" signature="17037:17057" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/StoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="86" column="125" lean-forward="false" selection-start-line="86" selection-start-column="125" selection-end-line="86" selection-end-column="125" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/constants/StoreType.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/store/StoreRegisterForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/StoreServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="46" column="45" lean-forward="true" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/StoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/CompanyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="86" column="8" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="89" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/systemuser/SystemUserCreateForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/SystemUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="15" column="83" lean-forward="true" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/StoreUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="194" column="20" lean-forward="true" selection-start-line="192" selection-start-column="8" selection-end-line="194" selection-end-column="20" />
+          <folding>
+            <marker date="1541062711241" expanded="true" signature="5588:5712" ph="SELECT FROM tb_store_user" />
+            <marker date="1541062711241" expanded="true" signature="5853:5897" ph="SELECT count... tb_store_user" />
+            <marker date="1541062711241" expanded="true" signature="6098:6160" ph="SELECT FROM tb_store_user" />
+            <marker date="1541062711241" expanded="true" signature="6485:8618" ph="INSERT INTO tb_store_user... " />
+            <marker date="1541062711241" expanded="true" signature="8724:10473" ph="UPDATE tb_st... " />
+            <marker date="1541062711241" expanded="true" signature="10534:10597" ph="DELETE FROM " />
+            <marker date="1541062711241" expanded="true" signature="10729:10754" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/SystemUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="193" column="22" lean-forward="true" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
+          <folding>
+            <marker date="1541067121495" expanded="true" signature="5301:5406" ph="SELECT FROM tb_system_user" />
+            <marker date="1541067121495" expanded="true" signature="5550:5595" ph="SELECT count... tb_system_user" />
+            <marker date="1541067121495" expanded="true" signature="5799:5862" ph="SELECT FROM tb_system_user" />
+            <marker date="1541067121495" expanded="true" signature="6190:8203" ph="INSERT INTO tb_system_user... " />
+            <marker date="1541067121495" expanded="true" signature="8311:9963" ph="UPDATE tb_sy... " />
+            <marker date="1541067121495" expanded="true" signature="10024:10088" ph="DELETE FROM " />
+            <marker date="1541067121495" expanded="true" signature="10222:10248" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="118" column="74" lean-forward="true" selection-start-line="118" selection-start-column="74" selection-end-line="118" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/SystemUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-98">
+          <caret line="48" column="16" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="48" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/SystemUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="120" column="18" lean-forward="true" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/companyuser/CompanyUserRegisterForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="28" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/storeuser/StoreUserQueryForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/storeuser/StoreUserCreateForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/storeuser/StoreUserRegisterForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/CompanyUserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="54" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="54" />
+        <state relative-caret-position="273">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/CompanyUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="82" column="26" lean-forward="true" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+        <state relative-caret-position="129">
+          <caret line="97" column="99" lean-forward="false" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="99" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/form/companyuser/CompanyUserCreateForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-980">
-          <caret line="81" column="53" lean-forward="true" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/util/UserCodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        <state relative-caret-position="306">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/CompanyUserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="41" column="39" lean-forward="false" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+        <state relative-caret-position="229">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/liyuan/ecommerce/mapper/CompanyUserMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/controller/StoreUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="250" column="33" lean-forward="false" selection-start-line="250" selection-start-column="33" selection-end-line="250" selection-end-column="33" />
-          <folding>
-            <marker date="1540985071397" expanded="true" signature="5620:5726" ph="SELECT FROM tb_company_user" />
-            <marker date="1540985071397" expanded="true" signature="5872:5918" ph="SELECT count... tb_company_user" />
-            <marker date="1540985071397" expanded="true" signature="6125:6189" ph="SELECT FROM tb_company_user" />
-            <marker date="1540985071397" expanded="true" signature="6444:8671" ph="select CONCA... " />
-            <marker date="1540985071397" expanded="true" signature="6451:8671" ph="SELECT uuid(... " />
-            <marker date="1540985071397" expanded="true" signature="6520:8671" ph="INSERT INTO tb_company_user... " />
-            <marker date="1540985071397" expanded="true" signature="8781:10538" ph="UPDATE tb_co... " />
-            <marker date="1540985071397" expanded="true" signature="10599:10664" ph="DELETE FROM " />
-            <marker date="1540985071397" expanded="true" signature="10800:10827" ph="DELETE FROM " />
-          </folding>
+        <state relative-caret-position="151">
+          <caret line="108" column="50" lean-forward="false" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1031.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/StoreUserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+        <state relative-caret-position="306">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/liyuan/ecommerce/service/impl/StoreUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="82" column="47" lean-forward="false" selection-start-line="82" selection-start-column="47" selection-end-line="82" selection-end-column="47" />
           <folding />
         </state>
       </provider>

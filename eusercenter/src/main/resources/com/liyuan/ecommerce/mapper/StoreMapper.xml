@@ -254,7 +254,7 @@
 		SELECT 
 		<include refid="fieldSql"/>
 		  FROM tb_store t 
-		 WHERE t.id = #{id,jdbcType = VARCHAR} 
+		 WHERE t.id = #{id,jdbcType = VARCHAR} AND t.is_delete = 0
 	</select>
 
 	<select id="count" parameterType="com.liyuan.ecommerce.domain.condition.store.StoreCondition" resultType="Integer" >
@@ -276,7 +276,10 @@
 	</select>
 
 	<insert id="insert" parameterType="com.liyuan.ecommerce.domain.po.store.StorePo">
-		INSERT INTO tb_store(  
+        <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.String">
+            select CONCAT('S',NEXTVAL('store_id'))
+        </selectKey>
+        INSERT INTO tb_store(
 			id
 		<if test="storeCode != null">
 			,store_code

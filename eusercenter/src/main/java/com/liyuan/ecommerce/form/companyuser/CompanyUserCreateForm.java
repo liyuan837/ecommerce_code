@@ -21,6 +21,9 @@ public class CompanyUserCreateForm implements Serializable {
 	@ApiModelProperty(value = "真实姓名")
 	private String realName;
 
+    @ApiModelProperty(value = "密码")
+    private String password;
+
 	@ApiModelProperty(value = "手机号，可用作登录验证")
 	private String phone;
 
@@ -42,20 +45,5 @@ public class CompanyUserCreateForm implements Serializable {
 
 	@ApiModelProperty(value = "用户角色id")
 	private Integer userRoleId;
-
-	@ApiModelProperty(value = "所属商家id")
-	private String companyId;
-
-	@ApiModelProperty(value = "添加人")
-	private String addUserId;
-
-	@ApiModelProperty(value = "修改操作人")
-	private String optUserId;
-
-	@ApiModelProperty(value = "状态，1正常，0注销")
-	private Integer state;
-
-	@ApiModelProperty(value = "是否删除")
-	private Integer isDelete;
 
 }
